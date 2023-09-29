@@ -1,0 +1,484 @@
+<style media="screen">
+    .slots-gap {
+        margin-bottom: 30px;
+    }
+
+    .kb_flexbox {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    .kb_span_btn {
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+        background: #000;
+        padding: 15px 37px;
+        margin: 0 auto;
+        display: inline-block;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: 2px solid #000;
+        font-weight: 700;
+    }
+
+    .kb_span_btn:hover {
+        color: #000;
+        background: #fff;
+    }
+
+    [data-bm-hero] .kb_span_btn,
+    [data-bm-hero] .kb_span_btn:hover {
+        background: #000;
+        border: 2px solid #000;
+        color: #fff;
+    }
+
+    [data-bm-hero] .whole-img,
+    [data-bm-hero] .show_mobile {
+        display: none;
+    }
+
+    [data-bm-hero] .img_cont {
+        max-width: 1520px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    [data-bm-hero] .img_cont picture img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    [data-bm-hero] .kb_subcat_content {
+        width: 50%;
+        text-align: center;
+        padding: 0 4%;
+        margin: 0;
+    }
+
+    [data-bm-hero] .kb_subcat_content img {
+        margin: 0 0 3%;
+    }
+
+    [data-bm-hero] .kb_subcat_content>div {
+        padding: 0;
+    }
+
+    [data-bm-hero] h1 {
+        font-size: 28px;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0 0 3%;
+        padding: 0;
+        line-height: 1.17;
+        letter-spacing: 1.1px;
+        color: #000;
+    }
+
+    [data-bm-hero] .kb_subcat_content svg {
+        display: inline-block;
+        margin: 0 auto;
+        width: 42%;
+    }
+
+    [data-bm-hero] p.kb_hero_p {
+        font-size: 22px;
+        margin: 0 0 3.5%;
+        letter-spacing: 1.4px;
+        line-height: 1.3;
+    }
+
+    [data-bm-hero] p.kb_hero_p strong {
+        display: block;
+        font-size: 140%;
+    }
+
+    [data-bm-hero] .kb_bottom_text_cont {
+        padding: 1% 2%;
+    }
+
+    [data-bm-hero] .kb_subcat_content_hidden {
+        display: none;
+        width: 100%;
+    }
+
+    [data-bm-hero] .kb_hero_p .kb_uppercase {
+        display: block;
+        text-transform: uppercase;
+        font-weight: 700 !important;
+    }
+
+    [data-bm-hero] .kb_strong {
+        color: #b7386d;
+    }
+
+    [data-bm-hero] #hero_svg_home {
+        margin: 0 auto 5px;
+        width: 54%;
+        height: auto;
+    }
+
+    [data-bm-hero] img.show_mobile {
+        display: none;
+    }
+
+    [data-bm-hero] .border-guy {
+        margin: 8px auto;
+        max-width: 93%;
+    }
+
+    [data-bm-hero] img.show_tablet {
+        display: none;
+        margin: 0 auto;
+    }
+
+    @media only screen and (max-width: 1300px) {
+        [data-bm-hero] h1 {
+            font-size: 27px;
+            margin: 0 0 15px;
+        }
+
+        [data-bm-hero] p.kb_hero_p {
+            font-size: 18px;
+        }
+    }
+
+    @media only screen and (max-width: 1100px) {
+        [data-bm-hero] h1 {
+            font-size: 21px;
+        }
+
+        [data-bm-hero] p.kb_hero_p {
+            font-size: 16px;
+        }
+
+        [data-bm-hero] .slots-gap {
+            margin: 0 0 2%;
+        }
+    }
+
+    @media only screen and (max-width: 1024px) {
+        [data-bm-hero] h1 {
+            font-size: 19px;
+        }
+
+        [data-bm-hero] p.kb_hero_p {
+            font-size: 16px;
+        }
+
+        [data-bm-hero] .kb_span_btn {
+            padding: 10px 26px;
+            font-size: 15px;
+        }
+    }
+
+    @media only screen and (max-width: 900px) {
+        [data-bm-hero] h1 {
+            font-size: 17px;
+        }
+
+        [data-bm-hero] p.kb_hero_p {
+            font-size: 15px;
+            padding: 0 3%;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        [data-bm-hero] .kb_flexbox.kb_flex_justify_start {
+            justify-content: flex-end;
+        }
+
+        [data-bm-hero] .kb_flex_vertical_center_items {
+            align-items: center;
+        }
+
+        [data-bm-hero] .lip-img {
+            display: none;
+        }
+
+        [data-bm-hero] .kb_subcat_content {
+            margin: 0;
+            width: 48%;
+            padding: 0 2% 0 0;
+        }
+
+        [data-bm-hero] .kb_cta {
+            text-align: center;
+        }
+
+        [data-bm-hero] .kb_subcat_content svg {
+            width: 42%;
+        }
+
+        [data-bm-hero] .img_cont {
+            margin: 0 0 2%;
+        }
+
+        [data-bm-hero] #hero_svg_home {
+            margin: 0 0 5px;
+            width: 70%;
+        }
+
+        [data-bm-hero] h1 {
+            font-size: 33px;
+            letter-spacing: 1px;
+            text-align: center;
+            margin: 2% 0 9%;
+            line-height: 1.35;
+        }
+
+        [data-bm-hero] p.kb_hero_p {
+            font-size: 18px;
+            text-align: center;
+            letter-spacing: .4px;
+            padding: 0 3%;
+            margin: 0 0 15%;
+            line-height: 1.4;
+        }
+
+        [data-bm-hero] .kb_cta {
+            text-align: center;
+        }
+
+        [data-bm-hero] .kb_nowrap {
+            display: inline;
+        }
+
+        [data-bm-hero] img.show_tablet {
+            display: block;
+            margin: 0 auto 8%;
+        }
+    }
+
+    @media only screen and (max-width: 680px) {
+        [data-bm-hero] img.show_tablet {
+            display: none;
+            margin: 0 auto;
+        }
+
+        [data-bm-hero] h1 {
+            font-size: 28px;
+        }
+
+        [data-bm-hero] p.kb_hero_p {
+            font-size: 16px;
+        }
+
+        [data-bm-hero] img.show_tablet {
+            display: block;
+            margin: 0 auto 8%;
+        }
+    }
+
+    @media only screen and (max-width: 560px) {
+        [data-bm-hero] .kb_slot_c_d_3_cont .column .headline-divider {
+            margin: 40px auto 5%;
+        }
+
+        [data-bm-hero] h1 {
+            font-size: 23px;
+        }
+
+        [data-bm-hero] p.kb_hero_p {
+            font-size: 13px;
+        }
+
+        [data-bm-hero] .kb_span_btn {
+            padding: 6px 15px;
+            font-size: 13px;
+        }
+
+        [data-bm-hero] .kb_subcat_content {
+            margin: 0;
+            width: 48%;
+            padding: 5% 2%;
+        }
+
+        [data-bm-hero] img.show_tablet {
+            display: block;
+            margin: 0 auto 8%;
+        }
+    }
+
+    @media only screen and (max-width: 460px) {
+        [data-bm-hero] h1 {
+            font-size: 19px;
+        }
+
+        [data-bm-hero] p.kb_hero_p {
+            font-size: 10px;
+        }
+
+        [data-bm-hero] .kb_subcat_content {
+            margin: 0;
+            width: 50%;
+            padding: 2%;
+        }
+
+        [data-bm-hero] .kb_subcat_content svg {
+            width: 42%;
+        }
+
+        [data-bm-hero] img.show_tablet {
+            display: block;
+            margin: 0 auto 8%;
+        }
+    }
+
+    @media only screen and (max-width: 415px) {
+        [data-bm-hero] .show_mobile_only {
+            display: none;
+        }
+
+        [data-bm-hero] .kb_flexbox {
+            position: inherit;
+            top: inherit;
+            left: inherit;
+            right: inherit;
+            bottom: inherit;
+            background-color: #fff;
+        }
+
+        [data-bm-hero] .kb_subcat_content {
+            width: 100%;
+            padding: 15px 0 20px;
+            margin: 0;
+        }
+
+        [data-bm-hero] h1 {
+            font-size: 20px;
+            text-align: center;
+            margin: 0 0 3%;
+            width: 100%;
+            padding: 0 2%;
+            margin: 0 auto 5%;
+        }
+
+        [data-bm-hero] p.kb_hero_p {
+            font-size: 16px;
+            text-align: center;
+            letter-spacing: 1.4px;
+            margin: 0 0 5%;
+        }
+
+        [data-bm-hero] .kb_span_btn {
+            width: 92%;
+            text-align: center;
+        }
+
+        [data-bm-hero] .kb_subcat_content svg {
+            width: 36%;
+            display: inline;
+        }
+
+        [data-bm-hero] .kb_subcat_content img {
+            margin: 0;
+        }
+
+        [data-bm-hero] .kb_span_btn {
+            padding: 10px 26px;
+        }
+
+        [data-bm-hero] p.kb_hero_p {
+            padding: 0;
+        }
+
+        [data-bm-hero] .border-guy {
+            margin: 8px auto;
+            max-width: 100%;
+        }
+
+        [data-bm-hero] .whole-img {
+            display: block;
+            margin: 0 auto -30px !important;
+        }
+    }
+
+    @media only screen and (max-width: 376px) {
+        [data-bm-hero] h1 {
+            font-size: 17px;
+        }
+
+        [data-bm-hero] p.kb_hero_p {
+            font-size: 15px;
+        }
+
+        [data-bm-hero] img.show_tablet {
+            display: none;
+            margin: 0 auto 8%;
+        }
+    }
+
+    @media only screen and (max-width: 321px) {
+        [data-bm-hero] h1 {
+            font-size: 17px;
+        }
+
+        [data-bm-hero] p.kb_hero_p {
+            font-size: 15px;
+        }
+
+        [data-bm-hero] img.show_tablet {
+            display: none;
+            margin: 0 auto 8%;
+        }
+    }
+</style>
+
+<div class="data-bm-hero" data-bm-hero>
+    <div class="img_cont">
+        <span class="tealium-offers-container">
+            <span class="tealium-offers" tealium-offers-promo-id="hero" tealium-offers-promo-name="homepage"
+                tealium-offers-promo-creative="hero" tealium-offers-promo-position="1">
+                <a href="$url('Product-Show','pid','US86964')$" class="tealium-promo-button" data-button-id="1">
+                    <picture class="show_mobile_only">
+                        <source media="(min-width: 769px)"
+                            srcset="//assets.bareminerals.com/is/image/BareEscentuals/EC19%5F0124%5FBarePro%5FLipstick%5FLaunch%5FD?wid=1520">
+                        <source media="(min-width: 416px)"
+                            srcset="//assets.bareminerals.com/is/image/BareEscentuals/EC19%5F0124%5FBarePro%5FLipstick%5FLaunch%5FT?wid=768">
+                        <source media="(min-width: 1px)"
+                            srcset="//assets.bareminerals.com/is/image/BareEscentuals/EC19%5F0124%5FBarePro%5FLipstick%5FLaunch%5FM?wid=414">
+                        <img src="//assets.bareminerals.com/is/image/BareEscentuals/EC19%5F0107%5FSkinlongevityFamily%5FM%5F414x368?wid=414"
+                            alt="">
+                    </picture>
+                    <div class="kb_flexbox kb_flex_vertical_center_items kb_flex_justify_end">
+                        <div class="kb_subcat_content">
+                            <div>
+                                <h1>
+                                    FULL OF LIP-LOVING MINERAL COLOR
+                                    <div class="border-guy" style="height:1px;border:1px solid #000;"></div>
+                                    FREE OF SMUDGING &amp; BUDGING
+                                </h1>
+                                <img src="//assets.bareminerals.com/is/image/BareEscentuals/EC19%5F0124%5FBarePro%5FLipstick%5FLaunch%5Fproduct?wid=636"
+                                    class="lip-img img-responsive" alt="">
+                                <img src="//assets.bareminerals.com/is/image/BareEscentuals/EC19%5F0124%5FBarePro%5FLipstick%5FLaunch%5FM?wid=414"
+                                    class="whole-img img-responsive" alt="">
+
+                                <div class="kb_show_now">
+                                    <p class="kb_hero_p">
+                                        <strong>NEW BAREPRO</strong>
+                                        Longwear Lipstick
+                                    </p>
+                                    <p class="kb_cta">
+                                        <span class="kb_span_btn">Shop Now</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </span>
+        </span>
+    </div>
+</div>

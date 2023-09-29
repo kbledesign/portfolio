@@ -18,6 +18,9 @@ In this section, you will find some of the front-end projects I worked on during
 - **Project 2**: Our Purpose Landing Page (Older portfolio project)
   - Responsive content page telling the story of the bareMinerals brand. Page features videos, scroll animations, and event handlers.
 
+- **Project 3**: Home Page Banner (Older portfolio project)
+  - Responsive desktop hero banner template created for weekly updates
+
 - **Project 3**: Redux Flash Cards (Newer)
   - Redux app showcasing basic react, routing, state management, redux, and ES6+.
   - This project is a react course assignment where I was able to build out the redux slices, component state, and more.
