@@ -25,6 +25,9 @@ In this section, you will find some of the front-end projects I worked on during
   - Redux app showcasing basic react, routing, state management, redux, and ES6+.
   - This project is a react course assignment where I was able to build out the redux slices, component state, and more.
 
+- **Project 4**: Todo App
+  - Basic todo app with redux and typescript
+
 ## Thanks for visiting.
 
 Thank you for visiting my front-end developer portfolio! I hope you find my work interesting, and I look forward to sharing more exciting projects in the future.
