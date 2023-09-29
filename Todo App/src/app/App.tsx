@@ -1,12 +1,11 @@
 import { ChangeEvent, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { Todo } from "./Interfaces"
+import { Todo } from "../interface/Interfaces"
 import { v4 as uuidv4 } from "uuid"
 import TodoTask from "../components/TodoTask"
 
 import { setTodo, completeTask, selectTodos } from "./AppSlice"
 import "../scss/styles.scss"
-
 
 
 const App: React.FC = () => {
@@ -82,7 +81,7 @@ const App: React.FC = () => {
 
       </div>
     </>
-  )
+    )
 }
 
 export default App

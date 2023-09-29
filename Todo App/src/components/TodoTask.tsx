@@ -1,4 +1,4 @@
-import { Todo } from "../Interfaces"
+import { Todo } from "../interface/Interfaces"
 
 interface Props {
     task: Todo;

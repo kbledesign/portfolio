@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { Todo, TodoState, TodoRemove, TotalState } from "./Interfaces"
+import { Todo, TodoState, TodoRemove, TotalState } from "../interface/Interfaces"
 
 const exampleTasks = [
     {
