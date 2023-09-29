@@ -1,0 +1,4692 @@
+@import "base";
+
+div#bounceandblur {
+    * {
+        box-sizing: border-box;
+    }
+
+    .img-responsive {
+        width: 100%;
+    }
+}
+
+.animated {
+    animation-duration: 2.1s;
+    animation-duration: 2.1s;
+    animation-fill-mode: both;
+    animation-fill-mode: both
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        transform: translateY(20px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        -ms-transform: translateY(20px);
+        transform: translateY(20px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+.fadeInUp {
+    animation-name: fadeInUp;
+    animation-name: fadeInUp
+}
+
+@keyframes bounceInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(2000px);
+        transform: translateY(2000px)
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(-30px);
+        transform: translateY(-30px)
+    }
+
+    80% {
+        transform: translateY(10px);
+        transform: translateY(10px)
+    }
+
+    100% {
+        transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+@keyframes bounceInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(2000px);
+        -ms-transform: translateY(2000px);
+        transform: translateY(2000px)
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(-30px);
+        -ms-transform: translateY(-30px);
+        transform: translateY(-30px)
+    }
+
+    80% {
+        transform: translateY(10px);
+        -ms-transform: translateY(10px);
+        transform: translateY(10px)
+    }
+
+    100% {
+        transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+.bounceInUp {
+    animation-name: bounceInUp;
+    animation-name: bounceInUp
+}
+
+.trackMe {
+    cursor: pointer
+}
+
+.kb_flexbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: -ms-flexbox;
+    display: flex;
+    display: flex;
+    width: 100%;
+    height: 100%
+}
+
+.kb_span_btn {
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    background: #000;
+    padding: 15px 37px;
+    margin: 0 auto;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid #000;
+    font-weight: 700
+}
+
+.kb_span_btn:hover {
+    color: #000;
+    background: #fff
+}
+
+p {
+    letter-spacing: 1px
+}
+
+.kb_headline {
+    font-weight: 700
+}
+
+.kb_padding {
+    padding: 10px
+}
+
+.relative {
+    position: relative
+}
+
+form button {
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    background: #000;
+    padding: 15px 37px;
+    margin: 0 auto;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid #000;
+    font-weight: 700;
+
+    &:hover {
+        color: #000;
+        background: #fff
+    }
+
+    @media only screen and (max-width:1100px) {
+        font-size: 16px;
+        padding: 13px 27px;
+    }
+}
+
+[data-module="text-navigation"] {
+    max-width: 1520px;
+    margin: 1% auto;
+
+    .kb-link-cont {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    div {
+        width: 20%;
+        padding: 10px 0;
+    }
+
+    div a {
+        text-align: center;
+        display: block;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+
+    .kb-link-cont .lines {
+        border-left: 2px solid #000;
+        border-right: 2px solid #000
+    }
+
+    @media only screen and (max-width:1100px) {
+        div a {
+            font-size: 16px;
+        }
+    }
+
+    @media only screen and (max-width:1100px) {
+        div a {
+            font-size: 14px;
+        }
+    }
+
+    @media only screen and (max-width:780px) {
+        display: none;
+    }
+}
+
+[data-module="select-shade"] {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+
+    img#imgFirst {
+        display: none;
+        margin: 0 auto;
+    }
+
+    img#imgSecond {
+        display: none;
+        margin: 0 auto;
+    }
+
+    p.kb_headline {
+        font-size: 38px;
+        text-align: center;
+    }
+
+    p.kb_desc {
+        font-size: 20px;
+        text-align: center;
+        padding: 0 20%;
+    }
+
+    p.kb_select {
+        padding: 1% 0;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .flexbox {
+        .img_cont {
+            max-width: 1520px;
+            margin: 0 auto;
+            position: relative
+        }
+
+        .img_cont picture img {
+            width: 100%;
+            height: auto;
+            display: block
+        }
+
+        .kb_subcat_content {
+            width: 100%;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            height: auto;
+            padding: 0 10%;
+
+        }
+
+        p.headline {
+            font-size: 28px;
+            text-align: center;
+            color: #fff;
+        }
+
+        p.description {
+            font-size: 24px;
+            text-align: center;
+            color: #fff;
+            font-weight: 300;
+        }
+    }
+
+    div.shade_box {
+        max-width: 160px;
+        margin: 0 auto 2%;
+
+        div {
+            padding: 2%;
+            width: 48%;
+            cursor: pointer;
+        }
+
+        img {
+            margin: 0 auto;
+            border-radius: 50%;
+        }
+
+
+        div.dawn {
+            border: 3px solid #fff;
+            background: url(//assets.bareminerals.com/is/image/BareEscentuals/Desktop%5FCircle%5FShade%5FDawn?scl=1);
+            background-size: cover;
+            width: 70px;
+            height: 70px;
+            margin: 0 auto;
+            border-radius: 50% 50%;
+        }
+
+        div.dusk {
+            border: 3px solid #fff;
+            background: url(//assets.bareminerals.com/is/image/BareEscentuals/Desktop%5FCircle%5FShade%5FDusk?scl=1);
+            background-size: cover;
+            width: 70px;
+            height: 70px;
+            margin: 0 auto;
+            border-radius: 50% 50%;
+        }
+
+        div.selected {
+            border: 3px solid #000;
+        }
+
+    }
+
+    .range1 {
+        .p1_prod {
+            background-image: url(//assets.bareminerals.com/is/image/BareEscentuals/Mobile%5FBB%5FEP%5F02%5FPALETTE%5F01%5FDawn%5FProduct?scl=1);
+            background-size: cover;
+            display: none;
+        }
+
+        @media only screen and (max-width:415px) {
+            .p1_prod {
+                display: block;
+            }
+        }
+    }
+
+    .range2 {
+        .p1_prod {
+            background-image: url(//assets.bareminerals.com/is/image/BareEscentuals/Mobile%5FBB%5FEP%5F03%5FBlush%5F01%5FMauveSunrise%5FProduct?scl=1);
+            background-size: cover;
+            display: none;
+        }
+
+        @media only screen and (max-width:415px) {
+            .p1_prod {
+                display: block;
+
+            }
+        }
+    }
+
+    div.range_select {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 290px;
+        padding: 3%;
+
+        >div>div {
+            border: 2px solid rgba(1, 1, 1, 0);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            margin: 0 1%;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .p1_fair {
+            background-color: #ead0c3;
+        }
+
+        .p1_med {
+            background-color: #d1a382;
+        }
+
+        .p1_tan {
+            background-color: #946450;
+        }
+
+        .p1_dark {
+            background-color: #503021;
+        }
+
+        div.selected {
+            border: 2px solid #fff;
+        }
+    }
+
+    div.shade_box_2 {
+        max-width: 350px;
+        margin: 0 auto 2%;
+
+        >div {
+            width: 25%;
+            cursor: pointer;
+            border: 3px solid #fff;
+        }
+
+        div.hex {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto;
+            border-radius: 50% 50%;
+        }
+
+        .hex_Mauve {
+            background-color: #DC859A;
+        }
+
+        .hex_Pink {
+            background-color: #F38393;
+        }
+
+        .hex_Coral {
+            background-color: #F58C85;
+        }
+
+        .hex_Blurred {
+            background-color: #D88C75;
+        }
+
+        div.selected {
+            border: 3px solid #000;
+        }
+    }
+
+    div.kb_60 {
+        width: 60%;
+    }
+
+    div.kb_40 {
+        width: 40%;
+    }
+
+    div.prod {
+        padding: 2% 0 0;
+
+        p {
+            text-align: center;
+        }
+
+        p.name {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        p.price {
+            font-size: 22px;
+        }
+    }
+
+    @media only screen and (max-width:1100px) {
+        p.kb_headline {
+            font-size: 32px;
+        }
+
+        p.kb_desc {
+            font-size: 16px;
+            padding: 0 20%;
+        }
+
+        p.kb_select {
+            padding: 1% 0;
+            font-size: 18px;
+        }
+
+        .flexbox {
+            p.headline {
+                font-size: 25px;
+            }
+
+            p.description {
+                font-size: 18px;
+            }
+        }
+
+        div.prod {
+            padding: 2% 0 0;
+
+            p {
+                text-align: center;
+            }
+
+            p.name {
+                font-size: 25px;
+                font-weight: 700;
+            }
+
+            p.price {
+                font-size: 18px;
+            }
+        }
+    }
+
+    @media only screen and (max-width:1024px) {
+        p.kb_headline {
+            font-size: 26px;
+        }
+
+        p.kb_desc {
+            font-size: 15px;
+            padding: 0 20%;
+        }
+
+        p.kb_select {
+            padding: 1% 0;
+            font-size: 18px;
+        }
+
+        .flexbox {
+            p.headline {
+                font-size: 25px;
+            }
+
+            p.description {
+                font-size: 18px;
+            }
+        }
+
+        div.prod {
+            padding: 2% 0 0;
+
+            p {
+                text-align: center;
+            }
+
+            p.name {
+                font-size: 25px;
+                font-weight: 700;
+            }
+
+            p.price {
+                font-size: 18px;
+            }
+        }
+    }
+
+    @media only screen and (max-width:768px) {
+        p.kb_headline {
+            font-size: 26px;
+        }
+
+        p.kb_desc {
+            font-size: 15px;
+            padding: 0 20%;
+        }
+
+        p.kb_select {
+            padding: 1% 0;
+            font-size: 18px;
+        }
+
+        .flexbox {
+            p.headline {
+                font-size: 25px;
+            }
+
+            p.description {
+                font-size: 18px;
+            }
+        }
+
+        div.prod {
+            padding: 2% 0 0;
+
+            p {
+                text-align: center;
+            }
+
+            p.name {
+                font-size: 25px;
+                font-weight: 700;
+            }
+
+            p.price {
+                font-size: 18px;
+            }
+        }
+
+        div.shade_box {
+            max-width: 160px;
+            margin: 0 auto 2%;
+
+            div {
+                padding: 2%;
+                width: 48%;
+                cursor: pointer;
+            }
+
+            img {
+                margin: 0 auto;
+                border-radius: 50%;
+            }
+
+            div.dawn {
+                border: 3px solid #fff;
+                background: url(//assets.bareminerals.com/is/image/BareEscentuals/Desktop%5FCircle%5FShade%5FDawn?scl=1);
+                background-size: cover;
+                width: 70px;
+                height: 70px;
+                margin: 0 auto;
+                border-radius: 50% 50%;
+            }
+
+            div.dusk {
+                border: 3px solid #fff;
+                background: url(//assets.bareminerals.com/is/image/BareEscentuals/Desktop%5FCircle%5FShade%5FDusk?scl=1);
+                background-size: cover;
+                width: 70px;
+                height: 70px;
+                margin: 0 auto;
+                border-radius: 50% 50%;
+            }
+
+            div.selected {
+                border: 3px solid #000;
+            }
+
+        }
+
+        div.shade_box_2 {
+            max-width: 300px;
+        }
+
+        div.range_select {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 230px;
+            padding: 3%;
+
+            >div>div {
+                border: 2px solid rgba(1, 1, 1, 0);
+                width: 49px;
+                height: 49px;
+                border-radius: 50%;
+                text-align: center;
+                margin: 0 1%;
+                color: #fff;
+            }
+
+            .p1_fair {
+                background-color: #ead0c3;
+            }
+
+            .p1_med {
+                background-color: #d1a382;
+            }
+
+            .p1_tan {
+                background-color: #946450;
+            }
+
+            .p1_dark {
+                background-color: #503021;
+            }
+
+            div.selected {
+                border: 2px solid #fff;
+            }
+        }
+    }
+
+    @media only screen and (max-width:560px) {
+        p.kb_headline {
+            font-size: 26px;
+        }
+
+        p.kb_desc {
+            font-size: 15px;
+            padding: 0 20%;
+        }
+
+        p.kb_select {
+            padding: 1% 0;
+            font-size: 18px;
+        }
+
+        .flexbox {
+            p.headline {
+                font-size: 25px;
+            }
+
+            p.description {
+                font-size: 18px;
+            }
+        }
+
+        div.prod {
+            padding: 2% 0 0;
+
+            p {
+                text-align: center;
+            }
+
+            p.name {
+                font-size: 25px;
+                font-weight: 700;
+            }
+
+            p.price {
+                font-size: 18px;
+            }
+        }
+
+        div.shade_box {
+            max-width: 160px;
+            margin: 0 auto 2%;
+
+            div {
+                padding: 2%;
+                width: 48%;
+                cursor: pointer;
+            }
+
+            img {
+                margin: 0 auto;
+                border-radius: 50%;
+            }
+
+
+            div.dawn {
+                border: 3px solid #fff;
+                background: url(//assets.bareminerals.com/is/image/BareEscentuals/Desktop%5FCircle%5FShade%5FDawn?scl=1);
+                background-size: cover;
+                width: 70px;
+                height: 70px;
+                margin: 0 auto;
+                border-radius: 50% 50%;
+            }
+
+            div.dusk {
+                border: 3px solid #fff;
+                background: url(//assets.bareminerals.com/is/image/BareEscentuals/Desktop%5FCircle%5FShade%5FDusk?scl=1);
+                background-size: cover;
+                width: 70px;
+                height: 70px;
+                margin: 0 auto;
+                border-radius: 50% 50%;
+            }
+
+            div.selected {
+                border: 3px solid #000;
+            }
+
+        }
+
+        div.range_select {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 230px;
+            padding: 3%;
+
+            >div>div {
+                border: 2px solid rgba(1, 1, 1, 0);
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                text-align: center;
+                margin: 0 1%;
+                color: #fff;
+            }
+
+            .p1_fair {
+                background-color: #ead0c3;
+            }
+
+            .p1_med {
+                background-color: #d1a382;
+            }
+
+            .p1_tan {
+                background-color: #946450;
+            }
+
+            .p1_dark {
+                background-color: #503021;
+            }
+
+            div.selected {
+                border: 2px solid #fff;
+            }
+        }
+
+    }
+
+    @media only screen and (max-width:460px) {
+        p.kb_headline {
+            font-size: 26px;
+        }
+
+        p.kb_desc {
+            font-size: 15px;
+            padding: 0 20%;
+        }
+
+        p.kb_select {
+            padding: 1% 0;
+            font-size: 18px;
+        }
+
+        .flexbox {
+            p.headline {
+                font-size: 25px;
+            }
+
+            p.description {
+                font-size: 18px;
+            }
+        }
+
+        div.prod {
+            padding: 2% 0 0;
+
+            p {
+                text-align: center;
+            }
+
+            p.name {
+                font-size: 25px;
+                font-weight: 700;
+            }
+
+            p.price {
+                font-size: 18px;
+            }
+        }
+
+        div.shade_box {
+            max-width: 160px;
+            margin: 0 auto 2%;
+
+            div {
+                padding: 2%;
+                width: 48%;
+                cursor: pointer;
+            }
+
+            img {
+                margin: 0 auto;
+                border-radius: 50%;
+            }
+
+            div.dawn {
+                border: 3px solid #fff;
+                background: url(//assets.bareminerals.com/is/image/BareEscentuals/Desktop%5FCircle%5FShade%5FDawn?scl=1);
+                background-size: cover;
+                width: 70px;
+                height: 70px;
+                margin: 0 auto;
+                border-radius: 50% 50%;
+            }
+
+            div.dusk {
+                border: 3px solid #fff;
+                background: url(//assets.bareminerals.com/is/image/BareEscentuals/Desktop%5FCircle%5FShade%5FDusk?scl=1);
+                background-size: cover;
+                width: 70px;
+                height: 70px;
+                margin: 0 auto;
+                border-radius: 50% 50%;
+            }
+
+            div.selected {
+                border: 3px solid #000;
+            }
+
+        }
+
+
+        div.range_select {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 180px;
+            padding: 3%;
+
+            >div>div {
+                border: 2px solid rgba(1, 1, 1, 0);
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                text-align: center;
+                margin: 0 1%;
+                color: #fff;
+            }
+
+            .p1_fair {
+                background-color: #ead0c3;
+            }
+
+            .p1_med {
+                background-color: #d1a382;
+            }
+
+            .p1_tan {
+                background-color: #946450;
+            }
+
+            .p1_dark {
+                background-color: #503021;
+            }
+
+            div.selected {
+                border: 2px solid #fff;
+            }
+        }
+    }
+
+    @media only screen and (max-width:415px) {
+        border-top: 1px solid #f9f9f9;
+        margin: 0;
+        padding: 2% 0;
+
+        p.kb_headline {
+            font-size: 26px;
+        }
+
+        p.kb_desc {
+            font-size: 15px;
+            padding: 0 0%;
+        }
+
+        p.kb_select {
+            padding: 1% 0;
+            font-size: 18px;
+        }
+
+        .flexbox {
+            p.headline {
+                font-size: 25px;
+            }
+
+            p.description {
+                font-size: 18px;
+            }
+        }
+
+        div.prod {
+            padding: 2% 0 0;
+
+            p {
+                text-align: center;
+            }
+
+            p.name {
+                font-size: 20px;
+                line-height: 1.1;
+                font-weight: 700;
+            }
+
+            p.price {
+                font-size: 18px;
+            }
+        }
+
+        div.shade_box {
+            max-width: 160px;
+            margin: 0 auto 2%;
+
+            div {
+                padding: 2%;
+                width: 48%;
+                cursor: pointer;
+            }
+
+            img {
+                margin: 0 auto;
+                border-radius: 50%;
+            }
+
+            div.dawn {
+                border: 3px solid #fff;
+                background: url(//assets.bareminerals.com/is/image/BareEscentuals/Desktop%5FCircle%5FShade%5FDawn?scl=1);
+                background-size: cover;
+                width: 70px;
+                height: 70px;
+                margin: 0 auto;
+                border-radius: 50% 50%;
+            }
+
+            div.dusk {
+                border: 3px solid #fff;
+                background: url(//assets.bareminerals.com/is/image/BareEscentuals/Desktop%5FCircle%5FShade%5FDusk?scl=1);
+                background-size: cover;
+                width: 70px;
+                height: 70px;
+                margin: 0 auto;
+                border-radius: 50% 50%;
+            }
+
+            div.selected {
+                border: 3px solid #000;
+            }
+
+        }
+
+        div.range_select {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            padding: 3%;
+
+            .flexbox {
+                justify-content: center;
+            }
+
+            >div>div {
+                border: 2px solid rgba(1, 1, 1, 0);
+                width: 55px;
+                height: 55px;
+                border-radius: 50%;
+                text-align: center;
+                margin: 0 1%;
+                color: #fff;
+            }
+
+            .p1_fair {
+                background-color: #ead0c3;
+            }
+
+            .p1_med {
+                background-color: #d1a382;
+            }
+
+            .p1_tan {
+                background-color: #946450;
+            }
+
+            .p1_dark {
+                background-color: #503021;
+            }
+
+            div.selected {
+                border: 2px solid #000;
+            }
+        }
+
+        div.shade_box_2 {
+            div.hex {
+                width: 60px;
+                height: 60px;
+                margin: 0 auto;
+                border-radius: 50% 50%;
+            }
+        }
+
+        .relative {
+            min-height: 100px;
+
+            img {
+                display: none;
+            }
+        }
+
+        div.kb_flex_shade_select {
+            display: block;
+        }
+
+        div.kb_60 {
+            width: 60%;
+        }
+
+        div.kb_40 {
+            width: 40%;
+        }
+
+        div.shade_box_2 {
+            max-width: 270px;
+        }
+
+        .range_master_prod,
+        .range_master_prod2 {
+            display: none;
+        }
+
+        img#imgFirst {
+            display: block;
+            max-width: auto;
+            width: 100%;
+            min-height: 378px;
+            max-height: 378px;
+            object-fit: cover;
+        }
+
+        img#imgSecond {
+            display: block;
+            max-width: auto;
+            width: 100%;
+            min-height: 378px;
+            max-height: 378px;
+            object-fit: cover;
+        }
+    }
+}
+
+[data-module="tri-selector"] {
+    max-width: 1520px;
+    margin: 0 auto;
+
+    div.kb_25 {
+        width: 25%;
+
+        >span {
+            display: block;
+            padding: 0 3%;
+
+            p {
+                text-align: center;
+                font-size: 22px;
+                line-height: 1.2;
+
+                strong {
+                    display: block;
+                    margin: 0 0 1%;
+                }
+            }
+        }
+
+        img {
+            max-width: 80%;
+            margin: 0 auto 3%;
+        }
+    }
+
+    .kb_50 {
+        width: 50%;
+
+        img {
+            max-width: 80%;
+            margin: 0 auto 3%;
+        }
+    }
+
+    p.headline {
+        text-align: center;
+        font-size: 33px;
+        text-transform: uppercase;
+        padding: 1% 0;
+    }
+
+    .car_1 {
+        display: none;
+    }
+
+    @media only screen and (max-width:1300px) {
+
+        div.kb_25 {
+            >span {
+                p {
+                    font-size: 22px;
+                }
+            }
+        }
+
+        p.headline {
+            font-size: 22px;
+        }
+    }
+
+    @media only screen and (max-width:1100px) {
+
+        div.kb_25 {
+            >span {
+                p {
+                    font-size: 22px;
+                }
+            }
+        }
+
+        p.headline {
+            font-size: 20px;
+        }
+    }
+
+    @media only screen and (max-width:1024px) {
+
+        div.kb_25 {
+            >span {
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        p.headline {
+            font-size: 18 px;
+        }
+    }
+
+    @media only screen and (max-width:900px) {
+        div.kb_25 {
+            >span {
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        p.headline {
+            font-size: 18px;
+        }
+    }
+
+    @media only screen and (max-width:768px) {
+        div.kb_25 {
+            >span {
+                padding: 0;
+
+                p {
+                    font-size: 12px;
+                }
+            }
+
+            img {
+                max-width: 70%;
+                margin: 0 auto 3%;
+            }
+        }
+
+        p.headline {
+            font-size: 18px;
+        }
+
+        .kb_50 {
+            width: 50%;
+
+            img {
+                max-width: 93%;
+                margin: 0 auto 3%;
+            }
+        }
+    }
+
+    @media only screen and (max-width:768px) {
+        form button {
+            font-size: 12px;
+            padding: 8px 16px;
+        }
+    }
+
+    @media only screen and (max-width:680px) {
+        form button {
+            font-size: 10px;
+            padding: 8px 12px;
+        }
+    }
+
+
+    @media only screen and (max-width:415px) {
+        p.headline {
+            font-size: 21px;
+        }
+
+        .main {
+            .kb_25 {
+                display: none;
+            }
+
+            .kb_50 {
+                width: 100%;
+
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+
+        .car_1 {
+            display: block;
+            padding: 1%;
+
+            p {
+                strong {
+                    display: block;
+                }
+
+                font-size: 18px;
+                text-align: center;
+            }
+
+            img {
+                max-width: 70%;
+                margin: 0 auto;
+            }
+        }
+
+        form button {
+            font-size: 16px;
+            padding: 12px 18px;
+        }
+
+        .slick-prev,
+        .slick-next {
+            z-index: 99;
+            width: 40px;
+            height: 40px;
+            display: block !important;
+        }
+
+        .slick-next {
+            right: 0;
+        }
+
+        .slick-prev {
+            left: 0;
+        }
+
+        .slick-prev svg,
+        .slick-next svg,
+        .slick-prev svg:hover,
+        .slick-next svg:hover {
+            width: 22px;
+        }
+
+        .slick-dots {
+            bottom: -20px;
+        }
+
+        .slick-slider {
+            margin: 20px;
+        }
+    }
+
+
+
+}
+
+[data-module="kb-5050"] {
+    max-width: 1520px;
+    margin: 0 auto;
+    padding: 20px 0;
+
+    .kb_50 {
+        width: 50%;
+    }
+
+    .kb_padding {
+        height: 100%;
+        padding: 0 30px;
+    }
+
+    p.name {
+        font-size: 37px;
+        font-weight: 700;
+        line-height: 1.1;
+        text-align: center;
+        margin: 0 0 3%;
+    }
+
+    p.desc {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .kb_padding {
+        div {
+            padding: 0 8%;
+        }
+
+    }
+
+    @media only screen and (max-width:1100px) {
+        p.name {
+            font-size: 24px;
+        }
+
+        p.desc {
+            font-size: 18px;
+        }
+    }
+
+    @media only screen and (max-width:1024px) {
+        p.name {
+            font-size: 22px;
+        }
+
+        p.desc {
+            font-size: 16px;
+        }
+    }
+
+    @media only screen and (max-width:415px) {
+        .flexbox {
+            display: block;
+        }
+
+        .kb_50 {
+            width: 100%;
+        }
+
+        .kb_padding {
+            padding: 5% 3%;
+
+            div {
+                padding: 0;
+            }
+        }
+    }
+}
+
+[data-bm-hero] {
+    a {
+        display: block;
+    }
+
+    max-width: 1520px;
+    margin: 0 auto;
+
+    .img-responsive {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    min-height:300px;
+    position:relative;
+
+    .down-button {
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        right: 0;
+    }
+
+    .kb_span_btn {
+        background: #000;
+        border: 2px solid #000
+    }
+
+    .whole-img {
+        display: none
+    }
+
+    .kb_span_btn:hover {
+        background: #fff;
+        border: 2px solid #000;
+        color: #000
+    }
+
+    .img_cont {
+        max-width: 1520px;
+        margin: 0 auto;
+        position: relative;
+        ;
+        max-height: auto;
+    }
+
+    .img_cont picture img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto
+    }
+
+    .kb_subcat_content {
+        width: 46%;
+        text-align: center;
+        padding: 0 3%;
+        margin: 0;
+        margin: 0 0 1% 3%;
+    }
+
+    .kb_subcat_content>div {
+        padding: 0
+    }
+
+    div.kb_hero_p {
+        font-size: 21px;
+        text-align: center;
+        text-transform: normal;
+        margin: 0;
+        font-weight: inherit;
+        letter-spacing: 1.1px;
+        color: #000;
+        margin: 0 0 2%;
+        padding: 0;
+        line-height: 1.17;
+    }
+
+    .kb_subcat_content svg {
+        display: inline-block;
+        margin: 0 auto;
+        width: 42%
+    }
+
+    h1 {
+        font-size: 30px;
+        margin: 0 0 3.5%;
+        letter-spacing: 1.4px;
+        line-height: 1.3;
+        text-transform: inherit;
+        padding: 0;
+        display: block;
+    }
+
+    h1 strong {
+        font-size: 100%;
+        font-weight: 700;
+    }
+
+    .kb_bottom_text_cont {
+        padding: 1% 2%
+    }
+
+    .kb_subcat_content_hidden {
+        display: none;
+        width: 100%
+    }
+
+    .kb_hero_p .kb_uppercase {
+        display: block;
+        font-weight: 700 !important
+    }
+
+    .kb_strong {
+        color: #b7386d
+    }
+
+    #hero_svg_home {
+        margin: 0 auto 5px;
+        width: 54%;
+        height: auto
+    }
+
+    img.show_mobile {
+        display: none
+    }
+
+    .border-guy {
+        margin: 8px auto;
+        max-width: 49%
+    }
+
+    img.show_tablet {
+        display: none;
+        margin: 0 auto
+    }
+
+    img.lip-img-tab {
+        display: none;
+    }
+
+    br.showNow {
+        display: none
+    }
+
+    .lip-img-mobile {
+        display: none;
+    }
+
+    p.spanHead {
+        display: none;
+    }
+
+    .reviews_stars {
+        margin: 0 0 3%;
+
+        p.stars {
+            font-size: 22px;
+            letter-spacing: 3px;
+        }
+    }
+
+    p.review_copy {
+        font-size: 18px;
+    }
+
+    div.small_text {
+        position: absolute;
+        bottom: 2%;
+        right: 1%;
+        width: 240px;
+
+        p {
+            text-align: left;
+            color: #fff;
+            font-size: 15px;
+        }
+    }
+
+    .cont_box_new_a,
+    .cont_box_new_b,
+    .cont_box_new_c {
+        display: none;
+    }
+
+    @media only screen and (max-width:1300px) {
+        div.kb_hero_p {
+            font-size: 24px;
+            margin: 0 0 15px
+        }
+
+        h1 {
+            font-size: 26px
+        }
+    }
+
+    @media only screen and (max-width:1100px) {
+        div.kb_hero_p {
+            font-size: 21px
+        }
+
+        h1 {
+            font-size: 22px
+        }
+
+        .home-center-slots .slots-gap,
+        .pt_categorylanding .slots-gap {
+            margin: 0 0 2%
+        }
+    }
+
+    @media only screen and (max-width:1024px) {
+        div.kb_hero_p {
+            font-size: 19px
+        }
+
+        h1 {
+            font-size: 20px
+        }
+
+        .kb_span_btn {
+            padding: 10px 26px;
+            font-size: 15px
+        }
+    }
+
+    @media only screen and (max-width:900px) {
+        div.kb_hero_p {
+            font-size: 17px
+        }
+
+        h1 {
+            font-size: 19px;
+            padding: 0 3%
+        }
+    }
+
+    @media only screen and (max-width:768px) {
+        border: none;
+
+        div.border-guy {
+            margin: 1% auto;
+            max-width: 36%;
+        }
+
+        .lip-img {
+            display: none
+        }
+
+        .kb_subcat_content {
+            margin: 0;
+            width: 50%;
+            padding: 0 0
+        }
+
+        .kb_cta {
+            text-align: center
+        }
+
+        .kb_subcat_content svg {
+            width: 42%
+        }
+
+        .img_cont {
+            margin: 0 0 2%
+        }
+
+        #hero_svg_home {
+            margin: 0 0 5px;
+            width: 70%
+        }
+
+        div.kb_hero_p {
+            font-size: 23px;
+            letter-spacing: 1px;
+            text-align: center;
+            margin: 2% 0 1%;
+            line-height: 1.35;
+
+            br {
+                display: none;
+            }
+        }
+
+        h1 {
+            font-size: 25px;
+            text-align: center;
+            letter-spacing: .4px;
+            padding: 0 3%;
+            margin: 0 0 2%;
+            line-height: 1.4;
+            font-weight: 700;
+
+            br {
+                display: none;
+            }
+        }
+
+        .kb_cta {
+            text-align: center
+        }
+
+        .kb_nowrap {
+            display: inline
+        }
+
+        img.show_tablet {
+            display: block;
+            margin: 0 auto 8%
+        }
+
+        br.showNow {
+            display: block
+        }
+
+        img.lip-img-tab {
+            display: block;
+            margin: 6% auto 5%;
+        }
+
+        .down-button {
+            display: none;
+        }
+
+        br.showNow {
+            display: block;
+        }
+
+        margin:0 0 3%;
+
+        h1 strong {
+            font-size: 117%;
+        }
+
+        .reviews_stars {
+            margin: 0 0 3%;
+
+            p.stars {
+                font-size: 16px;
+            }
+        }
+
+        p.review_copy {
+            font-size: 15px;
+        }
+
+        div.small_text {
+            position: absolute;
+            bottom: 2%;
+            right: 1%;
+            width: 240px;
+
+            p {
+                text-align: left;
+                color: #fff;
+                font-size: 15px;
+            }
+        }
+    }
+
+    @media only screen and (max-width:680px) {
+        img.show_tablet {
+            display: none;
+            margin: 0 auto
+        }
+
+        div.kb_hero_p {
+            font-size: 20px
+        }
+
+        h1 {
+            font-size: 19px
+        }
+
+        img.show_tablet {
+            display: block;
+            margin: 0 auto 8%
+        }
+    }
+
+
+    @media only screen and (max-width:560px) {
+        .kb_slot_c_d_3_cont .column .headline-divider {
+            margin: 40px auto 5%
+        }
+
+        div.kb_hero_p {
+            font-size: 19px
+        }
+
+        h1 {
+            font-size: 22px;
+            padding: 0;
+        }
+
+        .kb_span_btn {
+            padding: 6px 15px;
+            font-size: 13px
+        }
+
+        .kb_subcat_content {
+            margin: 0;
+            // width: 100%;
+            padding: 5% 2%
+        }
+
+        img.show_tablet {
+            display: block;
+            margin: 0 auto 8%
+        }
+    }
+
+    @media only screen and (max-width:460px) {
+        div.kb_hero_p {
+            font-size: 13px
+        }
+
+        h1 {
+            font-size: 12px
+        }
+
+        .kb_subcat_content svg {
+            width: 42%
+        }
+
+        img.show_tablet {
+            display: block;
+            margin: 0 auto 8%
+        }
+    }
+
+    @media only screen and (max-width:415px) {
+        img.lip-img-tab {
+            display: none;
+        }
+
+        p.spanHead {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            font-size: 20px;
+            text-align: center;
+            letter-spacing: 1.4px;
+            margin: 0 0 5%;
+            padding: 3% 0 0;
+            font-weight: 700;
+            line-height: 1.2;
+            font-size: 25px;
+        }
+
+        .kb_flexbox {
+            position: inherit;
+            top: inherit;
+            left: inherit;
+            right: inherit;
+            bottom: inherit;
+            background-color: #fff
+        }
+
+        .kb_subcat_content {
+            width: 100%;
+            padding: 15px 10px 0px;
+            margin: 0 auto
+        }
+
+        div.kb_hero_p {
+            font-size: 16px;
+            text-align: center;
+            font-weight: 700;
+            margin: 0 auto 2%;
+            width: 100%;
+            padding: 0;
+        }
+
+        br.showNow {
+            display: none;
+        }
+
+        h1 {
+            font-size: 20px;
+            text-align: center;
+            letter-spacing: 1.4px;
+            margin: 0 0 5%;
+            display: none;
+        }
+
+        .kb_span_btn {
+            width: 92%;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .kb_span_btn {
+            padding: 10px 26px
+        }
+
+        h1 {
+            padding: 0
+        }
+
+        div.border-guy {
+            margin: 8px auto;
+            max-width: 63%
+        }
+
+        .whole-img {
+            display: block;
+            margin: 0 auto -30px !important
+        }
+
+        .img_cont {
+            max-height: inherit;
+            border-bottom: none;
+        }
+
+        .lip-img-mobile {
+            display: block;
+        }
+
+        margin: 0 0 0;
+
+        .img-responsive {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        div.small_text {
+            display: none;
+        }
+
+        .reviews_stars {
+            margin: 0 0 0%;
+
+            p.stars {
+                font-size: 22px;
+                margin: 0;
+            }
+        }
+    }
+
+    @media only screen and (max-width:376px) {
+        div.kb_hero_p {
+            font-size: 18px
+        }
+
+        h1 {
+            font-size: 18px
+        }
+
+        img.show_tablet {
+            display: none;
+            margin: 0 auto 8%
+        }
+
+        div.border-guy {
+            margin: 1% auto;
+            max-width: 64%;
+        }
+    }
+
+    @media only screen and (max-width:321px) {
+        div.kb_hero_p {
+            font-size: 17px
+        }
+
+        h1 {
+            font-size: 15px
+        }
+
+        img.show_tablet {
+            display: none;
+            margin: 0 auto 8%
+        }
+    }
+}
+
+p.spanHead {
+    display: none;
+
+    @media only screen and (max-width:415px) {
+        display: block;
+        font-size: 20px;
+        text-align: center;
+        letter-spacing: 1.4px;
+        margin: 0 0 5%;
+        padding: 3% 0 0;
+        font-weight: 700;
+        line-height: 1.2;
+        font-size: 25px;
+
+        span {
+            font-size: 20px;
+            padding: 2% 3% 0;
+            text-align: center;
+            font-weight: 300;
+            line-height: 1.2;
+            font-size: 18px;
+            display: block;
+        }
+    }
+}
+
+.svg_hidden {
+    display: none;
+    align-items: flex-start;
+
+    div {
+        width: 90px;
+    }
+
+    svg {
+        width: 100%;
+    }
+
+    @media only screen and (max-width:415px) {
+        display: flex;
+    }
+}
+
+.down-button-circle {
+    border: 1px solid #999;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: #fff;
+    font-size: 26px;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.slider_module {
+    form button {
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+        background: #000;
+        padding: 15px 37px;
+        margin: 0 auto;
+        display: inline-block;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: 2px solid #000;
+        font-weight: 700;
+
+        &:hover {
+            color: #000;
+            background: #fff
+        }
+    }
+
+    .variant_selector {
+        max-width: 1000px;
+        margin: 0 auto 0;
+
+        .variant_container {
+            margin: 2% auto 1%;
+            justify-content: center;
+
+            div {
+                width: 50px;
+                height: 50px;
+                border: 2px solid #fff;
+                cursor: pointer;
+            }
+        }
+
+        .kb_prod_name {
+            font-size: 18px;
+            line-height: 1.2;
+            text-align: center;
+        }
+
+        .kb_prod_shade {
+            font-size: 18px;
+            line-height: 1.2;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .left img {
+            width: 100%;
+            margin: 0 auto;
+
+        }
+
+        .right img {
+            max-width: 70%;
+            width: 70%;
+            margin: 0 auto;
+
+        }
+
+        .variant_50_cont div {
+            width: 50%;
+            padding: 2% 0;
+        }
+    }
+
+    .right img.img2 {
+        display: none;
+    }
+
+    @media only screen and (max-width:1100px) {
+        .kb_headline {
+            font-size: 28px;
+        }
+
+        .kb_action {
+            font-size: 16px;
+        }
+    }
+
+    @media only screen and (max-width:1024px) {
+        padding: 2%;
+    }
+
+    @media only screen and (max-width:900px) {
+        padding: 2%;
+
+        .kb_prod_name {
+            padding: 0 8%;
+        }
+
+        .variant_container {
+            max-width: 80%;
+            flex-wrap: wrap;
+
+            div {
+                width: 50px !important;
+                height: 50px !important;
+            }
+        }
+
+        .variant_selector {
+            max-width: 90%;
+        }
+    }
+
+    @media only screen and (max-width:768px) {
+        display: block;
+
+        .left {
+            display: none;
+        }
+
+        .variant_50_cont.flexbox {
+            display: block;
+        }
+
+        .variant_selector .variant_50_cont div {
+            width: 100%;
+        }
+
+        .right img.img1 {
+            display: none;
+        }
+
+        .right img.img2 {
+            display: block;
+            width: auto;
+            max-width: 100%;
+            margin: 10% auto 10%;
+        }
+
+        .variant_selector .kb_prod_name {
+            padding: 0 30px
+        }
+
+        .kb_headline {
+            font-size: 22px;
+            padding: 0 40px;
+            font-weight: 700;
+        }
+
+    }
+
+
+    @media only screen and (max-width:768px) {
+        .variant_container {
+            max-width: 100%
+        }
+    }
+
+}
+
+.ingredients_carousel {
+    .carousel_cont {
+        // display:none;
+        max-width: 1000px;
+        margin: 0 auto 5%;
+
+        .left {
+            width: 50%;
+        }
+
+        img {
+            max-width: 500px;
+            width: 340px;
+        }
+
+        .right {
+            width: 50%;
+
+            .flexbox {
+                min-height: 220px;
+            }
+        }
+
+        .carousel_head {
+            font-size: 28px;
+            line-height: 1.2;
+            font-weight: 700;
+            text-align: left;
+            padding: 0 10% 0 0;
+        }
+
+        .carousel_p {
+            font-size: 16px;
+            line-height: 1.2;
+            font-weight: 400;
+            text-align: left;
+            padding: 0;
+        }
+
+        ul {
+            padding: 0 0 0 20px;
+            margin: 0;
+        }
+
+        li {
+            font-size: 16px;
+            line-height: 1.2;
+            font-weight: 400;
+            text-align: left;
+            text-decoration: underline;
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    @media only screen and (max-width:768px) {
+        display: none;
+    }
+
+    @media only screen and (max-width:415px) {
+        display: block;
+        margin: 20px 0 0;
+
+        .flexbox {
+            display: block;
+        }
+
+        .carousel_cont {
+            min-height: auto;
+
+            img {
+                max-width: 100%;
+                width: 100%;
+                height: auto;
+                margin: 0 0 10px;
+                display: block;
+            }
+
+            .carousel_head,
+            .carousel_p {
+                text-align: center;
+                padding: 0;
+            }
+
+            li,
+            .carousel_p {
+                padding: 0;
+                font-size: 15px;
+            }
+
+            .right,
+            .left {
+                width: 100%;
+            }
+
+            .left {
+                padding: 0 20px;
+            }
+
+            .right {
+                padding: 0 20px;
+            }
+
+            .carousel_head {
+                font-size: 20px;
+            }
+
+            .slick-dots {
+                bottom: -10px;
+            }
+
+            .right .flexbox {
+                min-height: 140px;
+            }
+        }
+    }
+}
+
+[data-module="kb-multi-prod-module"] {
+    .product_are_cont {
+        padding: 3% 0 0;
+        background: url(//assets.bareminerals.com/is/image/BareEscentuals/Desktop_BB_EP_05_Ingredient_02_Blush?scl=1);
+        background-size: cover;
+        background-position: center;
+        min-height: 1000px;
+
+        .kb_headline {
+            margin: 0 0 1%;
+            line-height: 1.2;
+        }
+
+        .product_are_cont_text {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .text-carousel {
+            margin: 5% auto;
+
+            p {
+                text-align: center;
+                font-size: 25px;
+            }
+        }
+
+        .prod_name {
+            font-size: 28px;
+            line-height: 1.2;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        .prod_p {
+            font-size: 18px;
+            line-height: 1.2;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        .prod_action {
+            font-size: 18px;
+            line-height: 1.2;
+            text-transform: uppercase;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        img {
+            margin: 0 auto;
+        }
+
+        .absolute_picker {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            min-height: 1000px;
+
+            img {
+                width: 700px;
+                margin: 0 auto;
+            }
+
+            li {
+                list-style: none;
+                font-size: 16px;
+            }
+
+            ul {
+                padding: 0;
+                margin: 0 0 4%;
+            }
+
+            p {
+                font-size: 20px;
+                line-height: 1.2;
+                font-weight: 300;
+                margin: 0 0 3%;
+            }
+
+            p.head {
+                font-weight: 700;
+                font-size: 25px;
+            }
+
+            >div {
+                position: absolute;
+                width: 300px;
+            }
+
+            .line-1 {
+                background: #333;
+                width: 140px;
+                height: 2px;
+                position: absolute;
+            }
+
+            .line-1-c {
+                position: relative;
+
+                .line-cir-1 {
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    background: #333;
+                    position: absolute;
+                    border: 1px solid #333;
+                }
+
+                .ringring {
+                    border: 3px solid #333;
+                    border-radius: 30px;
+                    height: 35px;
+                    width: 35px;
+                    position: absolute;
+                    animation: pulsate 1.2s ease-out;
+                    animation-iteration-count: infinite;
+                    opacity: 0.0
+                }
+
+                @keyframes pulsate {
+                    0% {
+                        transform: scale(0.1, 0.1);
+                        opacity: 0.0;
+                    }
+
+                    50% {
+                        opacity: 1.0;
+                    }
+
+                    100% {
+                        transform: scale(1.2, 1.2);
+                        opacity: 0.0;
+                    }
+                }
+
+                .ring-container {
+                    position: relative;
+                }
+            }
+
+            .item1 {
+                left: -210px;
+                top: 425px;
+                text-align: right;
+                width: 370px;
+
+                .show {
+                    display: none !important;
+                }
+
+                li {
+                    padding: 0 0 10px 90px;
+                }
+
+                .kb_span_btn_p {
+                    text-align: right;
+                }
+
+                .line-1 {
+                    top: 100px;
+                    right: -150px;
+                }
+
+                .line-1-c {
+                    position: relative;
+
+                    .ringring {
+                        top: -16px;
+                        right: -20px;
+                    }
+
+                    .line-cir-1 {
+                        top: -7px;
+                        right: -10px;
+                    }
+                }
+            }
+
+            .item2 {
+                right: -210px;
+                top: 260px;
+                text-align: left;
+                width: 370px;
+
+                .kb_span_btn_p {
+                    text-align: left;
+                }
+
+                .show {
+                    display: none !important;
+                }
+
+                li {
+                    padding: 0 0 10px 0px;
+                }
+
+                .line-1 {
+                    top: 100px;
+                    left: -150px;
+                }
+
+                .line-1-c {
+                    position: relative;
+
+                    .line-cir-1 {
+                        top: -7px;
+                        left: -10px;
+                    }
+
+                    .ringring {
+                        top: -16px;
+                        left: -20px;
+                    }
+                }
+            }
+
+            .item3 {
+                right: -150px;
+                bottom: 170px;
+                text-align: left;
+                width: 340px;
+
+                .kb_span_btn_p {
+                    text-align: left;
+                }
+
+                .show {
+                    display: none !important;
+
+                }
+
+                li {
+                    padding: 0 0 10px 0px;
+                }
+
+                .line-1 {
+                    width: 270px;
+                    top: 70px;
+                    left: -290px;
+                }
+
+                .line-1-c {
+                    position: relative;
+
+                    .line-cir-1 {
+                        bottom: 0px;
+                        left: 0px;
+                        width: 3px;
+                        height: 50px;
+                        border-radius: inherit;
+                    }
+
+                    .ringring {
+                        top: -20px;
+                        left: -17px;
+                    }
+
+                    .line-cir-2 {
+                        width: 15px;
+                        height: 15px;
+                        border-radius: 50%;
+                        background: #000;
+                        position: absolute;
+                        border: 1px solid #000;
+                        top: -10px;
+                        left: -6px
+                    }
+                }
+            }
+
+            .item4 {
+                right: -150px;
+                bottom: 230px;
+                text-align: left;
+                width: 340px;
+
+                .kb_span_btn_p {
+                    text-align: left;
+                }
+
+                .show {
+                    display: none !important;
+
+                }
+
+                li {
+                    padding: 0 0 10px 0px;
+                }
+
+                .line-1 {
+                    width: 270px;
+                    top: 70px;
+                    left: -290px;
+                }
+
+                .line-1-c {
+                    position: relative;
+
+                    .line-cir-1 {
+                        bottom: 0px;
+                        left: 0px;
+                        width: 3px;
+                        height: 50px;
+                        border-radius: inherit;
+                    }
+
+                    .ringring {
+                        top: -20px;
+                        left: -17px;
+                    }
+
+                    .line-cir-2 {
+                        width: 15px;
+                        height: 15px;
+                        border-radius: 50%;
+                        background: #000;
+                        position: absolute;
+                        border: 1px solid #000;
+                        top: -10px;
+                        left: -6px
+                    }
+                }
+            }
+        }
+
+        .swipable {
+            display: none;
+        }
+
+        .sourcecopy p {
+            strong {
+                display: block;
+            }
+
+            max-width:1200px;
+            margin:0 auto;
+            display:block;
+            padding:3% 5%;
+            font-size:18px;
+            line-height:1.2;
+            text-align:center;
+        }
+
+
+        @media only screen and (max-width:1300px) {
+            padding: 4% 0 0;
+            min-height: 100px;
+
+            img {
+                width: auto;
+                max-width: 600px;
+            }
+
+            .line-1 {
+                display: none;
+            }
+
+            .absolute_picker {
+                min-height: 790px;
+
+                .item1 {
+                    left: -60px;
+                    top: 340px;
+                    width: 320px;
+                }
+
+                .item2 {
+                    right: -50px;
+                    top: 180px;
+                    width: 300px;
+
+                }
+
+                .item3 {
+                    right: -70px;
+                    bottom: 180px;
+                    width: 290px;
+                }
+            }
+        }
+
+        @media only screen and (max-width:1100px) {
+            img {
+                width: auto;
+                max-width: 550px;
+            }
+
+            .kb_headline {
+                font-size: 34px;
+            }
+
+            .absolute_picker {
+                p {
+                    font-size: 16px;
+                }
+
+                li {
+                    font-size: 14px;
+                    margin: 0 0 1%;
+                    padding: 0;
+                }
+
+                .item1 {
+                    left: -30px;
+                    top: 360px;
+                    width: 320px;
+                }
+
+                .item2 {
+                    right: -20px;
+                    top: 180px;
+                    width: 280px;
+
+                }
+
+                .item3 {
+                    right: 0;
+                    bottom: 120px;
+                    width: 300px;
+                }
+            }
+        }
+
+        @media only screen and (max-width:1024px) {
+            img {
+                width: auto;
+                max-width: 550px;
+            }
+
+            .kb_headline {
+                font-size: 32px;
+            }
+
+            .absolute_picker {
+                p.head {
+                    font-size: 18px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+
+                li {
+                    font-size: 14px;
+                    margin: 0 0 1%;
+                    padding: 0;
+                }
+
+                .item1 {
+                    left: 20px;
+                    top: 370px;
+                    width: 250px;
+                }
+
+                .item2 {
+                    right: 10px;
+                    top: 150px;
+                    width: 280px;
+
+                }
+
+                .item3 {
+                    right: 150px;
+                    bottom: 100px;
+                    width: 310px;
+                }
+            }
+        }
+
+        @media only screen and (max-width:900px) {
+            img {
+                width: auto;
+                max-width: 490px;
+            }
+
+            .kb_headline {
+                font-size: 28px;
+            }
+
+            .text-carousel p {
+                font-size: 26px;
+            }
+
+            .absolute_picker {
+                p {
+                    font-size: 14px;
+                }
+
+                li {
+                    font-size: 12px;
+                    margin: 0 0 1%;
+                    padding: 0;
+                }
+
+                .item1 {
+                    left: 10px;
+                    top: 360px;
+                    width: 220px;
+                }
+
+                .item2 {
+                    right: 10px;
+                    top: 210px;
+                    width: 230px;
+
+                }
+
+                .item3 {
+                    right: 140px;
+                    bottom: 130px;
+                    width: 270px;
+                }
+            }
+        }
+
+
+
+        @media only screen and (max-width:768px) {
+            background-size: contain;
+            background-size: cover;
+
+            background-repeat: no-repeat;
+            background: url(//assets.bareminerals.com/is/image/BareEscentuals/Tablet%5FBB%5FEP%5F05%5FIngredient%5F02%5FBlush?scl=1);
+            max-height: 720px;
+
+            .prod_name {
+                margin: 60px 0 0;
+            }
+
+            .kb_headline {
+                font-size: 26px;
+                padding: 0 10%;
+                line-height: 1.2;
+                margin: 0 auto;
+                padding: 0 5%;
+            }
+
+            .show {
+                display: none !important;
+            }
+
+            .slick-dots {
+                bottom: -50px;
+            }
+
+            .text-carousel p {
+                font-size: 19px;
+                padding: 0 3%;
+            }
+
+            .absolute_picker {
+                max-height: 620px;
+
+                p {
+                    font-size: 14px;
+                }
+
+                p.head {
+                    font-size: 16px;
+                }
+
+                li {
+                    font-size: 12px;
+                    margin: 0 0 1%;
+                    padding: 0;
+                }
+
+                .item1 {
+                    left: 30px;
+                    top: 40px;
+                    width: 270px;
+                }
+
+                .item2 {
+                    right: auto;
+                    left: 30px;
+                    top: 280px;
+                    width: 270px;
+                    text-align: right;
+                }
+
+                .item3 {
+                    right: auto;
+                    left: 30px;
+                    top: 440px;
+                    bottom: auto;
+                    width: 270px;
+                    text-align: right;
+                }
+            }
+
+            .sourcecopy {
+                margin: 0;
+                padding: 2% 5%;
+            }
+
+            .swipable {
+                display: block;
+            }
+        }
+
+        @media only screen and (max-width:680px) {
+            background-size: cover;
+
+            .prod_name {
+                margin: 60px 0 0;
+            }
+
+            .kb_headline {
+                font-size: 26px;
+                padding: 0 10%;
+                line-height: 1.2;
+                margin: 0 auto;
+                padding: 0 5%;
+            }
+
+            .show {
+                display: none !important;
+            }
+
+            .slick-dots {
+                bottom: -50px;
+            }
+
+            .text-carousel p {
+                font-size: 19px;
+                padding: 0 3%;
+            }
+
+            // .kb_action,
+            // .prod_action {
+            //     display: none;
+            // }
+
+            .absolute_picker {
+                min-height: 560px;
+
+                p {
+                    font-size: 11px;
+                }
+
+                p.head {
+                    font-size: 14px;
+                }
+
+                li {
+                    font-size: 12px;
+                    margin: 0 0 1%;
+                    padding: 0;
+                }
+
+                .item1 {
+                    left: 30px;
+                    top: 40px;
+                    width: 240px;
+                }
+
+                .item2 {
+                    right: auto;
+                    left: 30px;
+                    top: 280px;
+                    width: 240px;
+                    text-align: right;
+                }
+
+                .item3 {
+                    right: auto;
+                    left: 30px;
+                    top: 440px;
+                    bottom: auto;
+                    width: 240px;
+                    text-align: right;
+                }
+            }
+
+            .sourcecopy {
+                margin: 0;
+                padding: 2% 5%;
+            }
+
+            .swipable {
+                display: block;
+            }
+        }
+
+        @media only screen and (max-width:580px) {
+            max-height: 580px;
+
+            .prod_name {
+                margin: 60px 0 0;
+            }
+
+            .kb_headline {
+                font-size: 26px;
+                padding: 0 10%;
+                line-height: 1.2;
+                margin: 0 auto;
+                padding: 0 5%;
+            }
+
+            .show {
+                display: none !important;
+            }
+
+            .slick-dots {
+                bottom: -50px;
+            }
+
+            .text-carousel p {
+                font-size: 19px;
+                padding: 0 3%;
+            }
+
+            .absolute_picker {
+                min-height: 580px;
+
+                p {
+                    font-size: 10px;
+                }
+
+                p.head {
+                    font-size: 12px;
+                }
+
+                li {
+                    font-size: 12px;
+                    margin: 0 0 1%;
+                    padding: 0;
+                }
+
+                .item1 {
+                    left: 30px;
+                    top: 40px;
+                    width: 240px;
+                }
+
+                .item2 {
+                    right: auto;
+                    left: 30px;
+                    top: 210px;
+                    width: 240px;
+                    text-align: right;
+                }
+
+                .item3 {
+                    right: auto;
+                    left: 30px;
+                    top: 340px;
+                    bottom: auto;
+                    width: 240px;
+                    text-align: right;
+                }
+            }
+
+
+            .sourcecopy {
+                margin: 0;
+                padding: 2% 5%;
+            }
+
+            .swipable {
+                display: block;
+            }
+        }
+
+        @media only screen and (max-width:460px) {
+            max-height: auto;
+            background-size: cover;
+
+            .prod_name {
+                margin: 60px 0 0;
+            }
+
+            .kb_headline {
+                font-size: 22px;
+                padding: 0 10%;
+                line-height: 1.2;
+                margin: 0 auto;
+                padding: 0 5%;
+            }
+
+            .show {
+                display: none !important;
+            }
+
+            .slick-dots {
+                bottom: -50px;
+            }
+
+            .text-carousel p {
+                font-size: 15px;
+                padding: 0 3%;
+            }
+
+            p.kb_action {
+                padding: 1%;
+                font-size: 15px;
+            }
+
+
+            .absolute_picker {
+                min-height: 380px;
+
+                p {
+                    font-size: 10px;
+                }
+
+                p.head {
+                    font-size: 12px;
+                }
+
+                li {
+                    font-size: 12px;
+                    margin: 0 0 1%;
+                    padding: 0;
+                }
+
+                .item1 {
+                    left: 15px;
+                    top: 0px;
+                    width: 200px;
+                }
+
+                .item2 {
+                    left: 15px;
+                    right: auto;
+                    top: 160px;
+                    width: 200px;
+
+                }
+
+                .item3 {
+                    left: 15px;
+                    right: auto;
+                    top: 280px;
+                    bottom: auto;
+                    width: 200px;
+                }
+            }
+
+
+            .sourcecopy {
+                margin: 0;
+                padding: 2% 5%;
+            }
+
+            .swipable {
+                display: block;
+            }
+        }
+
+        @media only screen and (max-width:415px) {
+            background-color: #f8f8f8;
+            padding: 7% 2% 4%;
+            background-position: center 40px;
+            background-image: url(//assets.bareminerals.com/is/image/BareEscentuals/Mobile%5FBB%5FEP%5F05%5FIngredient%5F01%5FBlush?scl=1);
+            background-size: cover;
+            background-position: top center;
+            max-height: inherit !important;
+            height: auto;
+
+            .absolute_picker {
+
+                margin: 360px 0 0;
+                position: relative;
+                min-height: auto;
+                max-height: auto;
+
+                p {
+                    font-size: 13px;
+                    text-align: center;
+                }
+
+                p.head {
+                    font-size: 15px;
+                }
+
+                li {
+                    font-size: 12px;
+                    margin: 0 0 1%;
+                    padding: 0;
+                }
+
+                .item1,
+                .item2,
+                .item3 {
+                    left: inherit;
+                    top: inherit;
+                    width: inherit;
+                    position: relative;
+                    bottom: inherit;
+                    right: inherit;
+                    padding: 1% 6%;
+                    font-size: 22px;
+
+                    br {
+                        display: none;
+                    }
+                }
+
+            }
+        }
+
+        @media only screen and (max-width:376px) {
+            background-color: #f8f8f8;
+            padding: 7% 2% 4%;
+            background-position: center 40px;
+            background-image: url(//assets.bareminerals.com/is/image/BareEscentuals/Mobile%5FBB%5FEP%5F05%5FIngredient%5F01%5FBlush?scl=1);
+            background-size: contain;
+            background-position: top center;
+            background-repeat: no-repeat;
+            max-height: inherit !important;
+            height: 780px;
+
+            .absolute_picker {
+
+                margin: 300px 0 0;
+                position: relative;
+                min-height: auto;
+                max-height: auto;
+
+                p {
+                    font-size: 13px;
+                    text-align: center;
+                }
+
+                p.head {
+                    font-size: 15px;
+                }
+
+                li {
+                    font-size: 12px;
+                    margin: 0 0 1%;
+                    padding: 0;
+                }
+
+                .item1,
+                .item2,
+                .item3 {
+                    left: inherit;
+                    top: inherit;
+                    width: inherit;
+                    position: relative;
+                    bottom: inherit;
+                    right: inherit;
+                    padding: 1% 6%;
+                    font-size: 22px;
+
+                    br {
+                        display: none;
+                    }
+                }
+
+            }
+        }
+
+
+    }
+}
+
+
+[data-module="kb-multi-prod-module"] {
+    .product_are_cont2 {
+        padding: 3% 0 0;
+        background: url(//assets.bareminerals.com/is/image/BareEscentuals/Desktop%5FBB%5FEP%5F05%5FIngredient%5F01%5FPalette?scl=1);
+        background-size: cover;
+        background-position: center;
+        min-height: 1000px;
+
+
+        .kb_headline {
+            margin: 0 0 1%;
+            line-height: 1.2;
+        }
+
+        .product_are_cont_text {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .text-carousel {
+            margin: 5% auto;
+
+            p {
+                text-align: center;
+                font-size: 25px;
+            }
+        }
+
+        .prod_name {
+            font-size: 28px;
+            line-height: 1.2;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        .prod_p {
+            font-size: 18px;
+            line-height: 1.2;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        .prod_action {
+            font-size: 18px;
+            line-height: 1.2;
+            text-transform: uppercase;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        img {
+            margin: 0 auto;
+        }
+
+        .absolute_picker {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            min-height: 1000px;
+
+            /* border:1px solid #c9c9c9; */
+            img {
+                width: 700px;
+                margin: 0 auto;
+            }
+
+            li {
+                list-style: none;
+                font-size: 16px;
+            }
+
+            ul {
+                padding: 0;
+                margin: 0 0 4%;
+            }
+
+            p {
+                font-size: 20px;
+                line-height: 1.2;
+                font-weight: 300;
+                margin: 0 0 3%;
+            }
+
+            p.head {
+                font-weight: 700;
+                font-size: 25px;
+            }
+
+            >div {
+                position: absolute;
+                width: 300px;
+            }
+
+            .line-1 {
+                background: #333;
+                width: 140px;
+                height: 2px;
+                position: absolute;
+            }
+
+            .line-1-c {
+                position: relative;
+
+                .line-cir-1 {
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    background: #333;
+                    position: absolute;
+                    border: 1px solid #333;
+                }
+
+                .ringring {
+                    border: 3px solid #333;
+                    border-radius: 30px;
+                    height: 35px;
+                    width: 35px;
+                    position: absolute;
+                    animation: pulsate 1.2s ease-out;
+                    animation-iteration-count: infinite;
+                    opacity: 0.0
+                }
+
+                @keyframes pulsate {
+                    0% {
+                        transform: scale(0.1, 0.1);
+                        opacity: 0.0;
+                    }
+
+                    50% {
+                        opacity: 1.0;
+                    }
+
+                    100% {
+                        transform: scale(1.2, 1.2);
+                        opacity: 0.0;
+                    }
+                }
+
+                .ring-container {
+                    position: relative;
+                }
+            }
+
+
+            .item1 {
+                left: -210px;
+                top: 210px;
+                text-align: right;
+                width: 370px;
+
+                .show {
+                    display: none !important;
+                }
+
+                li {
+                    padding: 0 0 10px 90px;
+                }
+
+                .kb_span_btn_p {
+                    text-align: right;
+                }
+
+                .line-1 {
+                    top: 100px;
+                    right: -150px;
+                }
+
+                .line-1-c {
+                    position: relative;
+
+                    .ringring {
+                        top: -16px;
+                        right: -20px;
+                    }
+
+                    .line-cir-1 {
+                        top: -7px;
+                        right: -10px;
+                    }
+                }
+            }
+
+            .item2 {
+                right: 760px;
+                top: 550px;
+                text-align: right;
+                width: 370px;
+
+                .kb_span_btn_p {
+                    text-align: left;
+                }
+
+                .show {
+                    display: none !important;
+                }
+
+                li {
+                    padding: 0 0 10px 0px;
+                }
+
+                .line-1 {
+                    top: 100px;
+                    left: 400px;
+                }
+
+                .line-1-c {
+                    position: relative;
+
+                    .line-cir-1 {
+                        top: -7px;
+                        right: -10px;
+                    }
+
+                    .ringring {
+                        top: -16px;
+                        right: -20px;
+                    }
+                }
+            }
+
+            .item3 {
+                right: -50px;
+                bottom: 230px;
+                text-align: left;
+                width: 440px;
+
+                .kb_span_btn_p {
+                    text-align: left;
+                }
+
+                .show {
+                    display: none !important;
+
+                }
+
+                li {
+                    padding: 0 0 10px 0px;
+                }
+
+                .line-1 {
+                    height: 130px;
+                    width: 2px;
+                    top: -140px;
+                    left: 90px;
+                }
+
+                .line-1-c {
+                    position: relative;
+
+                    .line-cir-1 {
+                        bottom: 0px;
+                        left: 0px;
+                        width: 3px;
+                        height: 50px;
+                        border-radius: inherit;
+                    }
+
+                    .ringring {
+                        top: -20px;
+                        left: -17px;
+                    }
+
+                    .line-cir-2 {
+                        width: 15px;
+                        height: 15px;
+                        border-radius: 50%;
+                        background: #000;
+                        position: absolute;
+                        border: 1px solid #000;
+                        top: -10px;
+                        left: -6px
+                    }
+                }
+            }
+        }
+
+        .swipable {
+            display: none;
+        }
+
+        .sourcecopy p {
+            strong {
+                display: block;
+            }
+
+            max-width:1200px;
+            margin:0 auto;
+            display:block;
+            padding:3% 5%;
+            font-size:18px;
+            line-height:1.2;
+            text-align:center;
+        }
+
+
+        @media only screen and (max-width:1300px) {
+            padding: 4% 0 0;
+            min-height: 100px;
+
+            img {
+                width: auto;
+                max-width: 600px;
+            }
+
+            .line-1 {
+                display: none;
+            }
+
+            .absolute_picker {
+                min-height: 790px;
+
+                .item1 {
+                    left: -105px;
+                    top: 20px;
+                    width: 320px;
+                }
+
+                .item2 {
+                    right: 730px;
+                    top: 370px;
+                    width: 300px;
+
+                }
+
+                .item3 {
+                    right: -10px;
+                    bottom: 150px;
+                    width: 290px;
+                }
+            }
+        }
+
+        @media only screen and (max-width:1100px) {
+            img {
+                width: auto;
+                max-width: 550px;
+            }
+
+            .kb_headline {
+                font-size: 34px;
+            }
+
+            .absolute_picker {
+                p {
+                    font-size: 16px;
+                }
+
+                li {
+                    font-size: 14px;
+                    margin: 0 0 1%;
+                    padding: 0;
+                }
+
+                .item1 {
+                    left: -30px;
+                    top: 30px;
+                    width: 320px;
+                }
+
+                .item2 {
+                    right: 700px;
+                    top: 380px;
+                    width: 280px;
+
+                }
+
+                .item3 {
+                    right: 50px;
+                    bottom: 140px;
+                    width: 320px;
+                }
+            }
+        }
+
+        @media only screen and (max-width:1024px) {
+            img {
+                width: auto;
+                max-width: 550px;
+            }
+
+            .kb_headline {
+                font-size: 30px;
+            }
+
+            .absolute_picker {
+                p {
+                    font-size: 16px;
+                }
+
+                li {
+                    font-size: 14px;
+                    margin: 0 0 1%;
+                    padding: 0;
+                }
+
+                .item1 {
+                    left: 20px;
+                    top: 70px;
+                    width: 250px;
+                }
+
+                .item2 {
+                    right: 690px;
+                    top: 350px;
+                    width: 280px;
+
+                }
+
+                .item3 {
+                    right: 50px;
+                    bottom: 200px;
+                    width: 320px;
+                }
+            }
+        }
+
+        @media only screen and (max-width:900px) {
+            img {
+                width: auto;
+                max-width: 490px;
+            }
+
+            .kb_headline {
+                font-size: 28px;
+            }
+
+            .text-carousel p {
+                font-size: 26px;
+            }
+
+            .absolute_picker {
+                p {
+                    font-size: 14px;
+                }
+
+                li {
+                    font-size: 12px;
+                    margin: 0 0 1%;
+                    padding: 0;
+                }
+
+                .item1 {
+                    left: 10px;
+                    top: 60px;
+                    width: 280px;
+                }
+
+                .item2 {
+                    right: 600px;
+                    top: 310px;
+                    width: 260px;
+
+                }
+
+                .item3 {
+                    right: 70px;
+                    bottom: 230px;
+                    width: 310px;
+                }
+            }
+        }
+
+        @media only screen and (max-width:768px) {
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-image: url(//assets.bareminerals.com/is/image/BareEscentuals/Tablet%5FBB%5FEP%5F05%5FIngredient%5F01%5FPalette?scl=1);
+            max-height: 720px;
+
+            .prod_name {
+                margin: 60px 0 0;
+            }
+
+            .kb_headline {
+                font-size: 26px;
+                padding: 0 10%;
+                line-height: 1.2;
+                margin: 0 auto;
+                padding: 0 5%;
+            }
+
+            .show {
+                display: none !important;
+            }
+
+            .slick-dots {
+                bottom: -50px;
+            }
+
+            .text-carousel p {
+                font-size: 19px;
+                padding: 0 3%;
+            }
+
+            .absolute_picker {
+                max-height: 620px;
+
+                p {
+                    font-size: 14px;
+                }
+
+                p.head {
+                    font-size: 15px;
+                }
+
+                li {
+                    font-size: 12px;
+                    margin: 0 0 1%;
+                    padding: 0;
+                }
+
+                .item1 {
+                    left: 40px;
+                    top: 30px;
+                    width: 240px;
+                    text-align: right;
+                }
+
+                .item2 {
+                    left: 40px;
+                    right: auto;
+                    top: 210px;
+                    width: 240px;
+                    text-align: right;
+                }
+
+                .item3 {
+                    left: 40px;
+                    right: auto;
+                    bottom: 270px;
+                    width: 240px;
+                    text-align: right;
+                }
+            }
+
+
+            .sourcecopy {
+                margin: 0;
+                padding: 2% 5%;
+            }
+
+            .swipable {
+                display: block;
+            }
+        }
+
+
+        @media only screen and (max-width:680px) {
+            max-height: auto;
+
+            .prod_name {
+                margin: 60px 0 0;
+            }
+
+            .kb_headline {
+                font-size: 26px;
+                padding: 0 10%;
+                line-height: 1.2;
+                margin: 0 auto;
+                padding: 0 5%;
+            }
+
+            .show {
+                display: none !important;
+            }
+
+            .slick-dots {
+                bottom: -50px;
+            }
+
+            .text-carousel p {
+                font-size: 19px;
+                padding: 0 3%;
+            }
+
+            .absolute_picker {
+                min-height: 580px;
+
+                p {
+                    font-size: 11px;
+                }
+
+                p.head {
+                    font-size: 14px;
+                }
+
+                li {
+                    font-size: 12px;
+                    margin: 0 0 1%;
+                    padding: 0;
+                }
+
+                .item1 {
+                    left: 40px;
+                    top: 30px;
+                    width: 240px;
+                    text-align: right;
+                }
+
+                .item2 {
+                    left: 40px;
+                    right: auto;
+                    top: 210px;
+                    width: 240px;
+                    text-align: right;
+                }
+
+                .item3 {
+                    left: 40px;
+                    right: auto;
+                    bottom: 130px;
+                    width: 240px;
+                    text-align: right;
+                }
+            }
+
+
+            .sourcecopy {
+                margin: 0;
+                padding: 2% 5%;
+            }
+
+            .swipable {
+                display: block;
+            }
+        }
+
+        @media only screen and (max-width:560px) {
+            max-height: auto;
+
+            .prod_name {
+                margin: 60px 0 0;
+            }
+
+            .kb_headline {
+                font-size: 26px;
+                padding: 0 10%;
+                line-height: 1.2;
+                margin: 0 auto;
+                padding: 0 5%;
+            }
+
+            .show {
+                display: none !important;
+            }
+
+            .slick-dots {
+                bottom: -50px;
+            }
+
+            .text-carousel p {
+                font-size: 19px;
+                padding: 0 3%;
+            }
+
+            .absolute_picker {
+                min-height: 480px;
+
+                p {
+                    font-size: 10px;
+                }
+
+                p.head {
+                    font-size: 12px;
+                }
+
+                li {
+                    font-size: 12px;
+                    margin: 0 0 1%;
+                    padding: 0;
+                }
+
+                .item1 {
+                    left: 40px;
+                    top: 30px;
+                    width: 150px;
+                    text-align: right;
+                }
+
+                .item2 {
+                    left: 40px;
+                    right: auto;
+                    top: 150px;
+                    width: 150px;
+                    text-align: right;
+                }
+
+                .item3 {
+                    left: 40px;
+                    right: auto;
+                    bottom: 130px;
+                    width: 150px;
+                    text-align: right;
+                }
+            }
+
+
+            .sourcecopy {
+                margin: 0;
+                padding: 2% 5%;
+            }
+
+            .swipable {
+                display: block;
+            }
+        }
+
+        @media only screen and (max-width:460px) {
+            max-height: auto;
+
+            .prod_name {
+                margin: 60px 0 0;
+            }
+
+            .kb_headline {
+                font-size: 22px;
+                padding: 0 10%;
+                line-height: 1.2;
+                margin: 0 auto;
+                padding: 0 5%;
+            }
+
+            .show {
+                display: none !important;
+            }
+
+            .slick-dots {
+                bottom: -50px;
+            }
+
+            .text-carousel p {
+                font-size: 15px;
+                padding: 0 3%;
+            }
+
+            p.kb_action {
+                padding: 1%;
+                font-size: 15px;
+            }
+
+
+            .absolute_picker {
+                min-height: 380px;
+
+                p {
+                    font-size: 10px;
+                }
+
+                p.head {
+                    font-size: 12px;
+                }
+
+                li {
+                    font-size: 12px;
+                    margin: 0 0 1%;
+                    padding: 0;
+                }
+
+                .item1 {
+                    left: 40px;
+                    top: 30px;
+                    width: 150px;
+                    text-align: right;
+                }
+
+                .item2 {
+                    left: 40px;
+                    right: auto;
+                    top: 150px;
+                    width: 150px;
+                    text-align: right;
+                }
+
+                .item3 {
+                    left: 40px;
+                    right: auto;
+                    bottom: 30px;
+                    width: 150px;
+                    text-align: right;
+                }
+            }
+
+
+            .sourcecopy {
+                margin: 0;
+                padding: 2% 5%;
+            }
+
+            .swipable {
+                display: block;
+            }
+        }
+
+        @media only screen and (max-width:415px) {
+            background-color: #f8f8f8;
+            padding: 7% 2% 4%;
+            background-size: cover;
+            background-position: top center;
+
+            background-image: url(//assets.bareminerals.com/is/image/BareEscentuals/Mobile%5FBB%5FEP%5F05%5FIngredient%5F01%5FPalette?scl=1);
+
+
+
+            max-height: inherit !important;
+            height: auto;
+
+
+            .absolute_picker {
+
+
+                margin: 384px 0 0;
+                position: relative;
+                min-height: auto;
+                max-height: auto;
+
+                p {
+                    font-size: 13px;
+                    text-align: center;
+                }
+
+                p.head {
+                    font-size: 15px;
+                }
+
+                li {
+                    font-size: 12px;
+                    margin: 0 0 1%;
+                    padding: 0;
+                }
+
+                .item1,
+                .item2,
+                .item3 {
+                    left: inherit;
+                    top: inherit;
+                    width: inherit;
+                    position: relative;
+                    bottom: inherit;
+                    right: inherit;
+                    padding: 1% 6%;
+
+                    br {
+                        display: none;
+                    }
+                }
+
+            }
+        }
+
+        @media only screen and (max-width:376px) {
+            background-color: #f8f8f8;
+            padding: 7% 2% 4%;
+            background-size: contain;
+            background-position: top center;
+
+            background-image: url(//assets.bareminerals.com/is/image/BareEscentuals/Mobile%5FBB%5FEP%5F05%5FIngredient%5F01%5FPalette?scl=1);
+            background-repeat: no-repeat;
+
+
+            max-height: inherit !important;
+            height: 780px;
+
+            // .kb_action {
+            //     display: none;
+            // }
+
+            .absolute_picker {
+
+
+                margin: 300px 0 0;
+                position: relative;
+                min-height: auto;
+                max-height: auto;
+
+                p {
+                    font-size: 13px;
+                    text-align: center;
+                }
+
+                p.head {
+                    font-size: 15px;
+                }
+
+                li {
+                    font-size: 12px;
+                    margin: 0 0 1%;
+                    padding: 0;
+                }
+
+                .item1,
+                .item2,
+                .item3 {
+                    left: inherit;
+                    top: inherit;
+                    width: inherit;
+                    position: relative;
+                    bottom: inherit;
+                    right: inherit;
+                    padding: 1% 6%;
+
+                    br {
+                        display: none;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.sliderCont {
+    margin: 0 auto;
+    max-width: 1520px;
+}
+
+
+
+.hayley_bkr {
+    .play-button-wrapper {
+        position: absolute;
+        width: 55px;
+        height: 55px;
+        background: white;
+        top: 50%;
+        left: 50%;
+        border-radius: 50px;
+        margin-left: -20px;
+        margin-top: -20px;
+        padding: 1px;
+        opacity: 0.9;
+    }
+
+    .play-button i {
+        position: absolute;
+        font-size: 34px;
+        top: 10px;
+        left: 18px;
+        color: white;
+    }
+
+    .play-button {
+        width: 53px;
+        height: 53px;
+        background: black;
+        margin: 0 auto;
+        border-radius: 50px;
+        opacity: 0.6;
+    }
+
+    .hayl_vid {
+        cursor: pointer;
+    }
+
+    padding:5% 0;
+    background: url(//assets.bareminerals.com/is/image/BareEscentuals/Desktop%5FBB%5FEP%5F06%5FVideo%5FGradBg?wid=1520);
+    background-size:contain;
+    background-repeat:no-repeat;
+    font-size: 13px;
+
+    .bp_2col_cont {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .bp_2col_cont .kb_video_cont {
+        padding: 2% 0 0
+    }
+
+    .bp_2col_cont .video-container {
+        margin: 0 auto;
+        display: block;
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 3%;
+        height: 0;
+        overflow: hidden
+    }
+
+    .bp_2col_cont .video-container iframe,
+    .video-container object,
+    .video-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%
+    }
+
+    .kb_action {
+        font-size: 24px;
+        line-height: 1.3;
+        text-align: center;
+    }
+
+    @media only screen and (max-width:1100px) {
+        padding: 5% 0 0;
+
+        .kb_headline {
+            font-size: 32px;
+        }
+
+        .kb_action {
+            font-size: 16px;
+        }
+
+        .bp_2col_cont .kb_application {
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 1.6px;
+            text-align: center
+        }
+
+
+    }
+
+    @media only screen and (max-width:1024px) {
+        .bp_2col_cont {
+            max-width: 900px;
+        }
+    }
+
+    @media only screen and (max-width:900px) {
+        .bp_2col_cont {
+            max-width: 800px;
+        }
+    }
+
+    @media only screen and (max-width:768px) {
+        /* display:none; */
+        /* background: inherit; */
+        padding: 5% 3%;
+
+        .bp_2col_cont .kb_application {
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 1.6px;
+            text-align: center
+        }
+
+        .bp_2col_cont .video-container {
+            padding-top: 0;
+        }
+
+    }
+
+    @media only screen and (max-width:415px) {
+        .bp_2col_cont {
+            position: relative;
+            min-height: 210px;
+        }
+
+        display:block;
+        min-height:300px;
+
+        .kb_headline {
+            font-size: 21px;
+            padding: 0 10px;
+            margin: 0 0 2%;
+            display: block;
+        }
+
+        .kb_action {
+            font-size: 14px;
+            padding: 0 10px;
+
+            br {
+                display: none;
+            }
+
+            // display: none;
+        }
+
+        .bp_2col_cont {
+            padding: 0 14px;
+            display: block;
+        }
+    }
+
+}
+
+
+.cleanwithout {
+    .kb_container {
+        background: url(//assets.bareminerals.com/is/image/BareEscentuals/17_Cleanbg_1520x706?wid=1520);
+        min-height: 500px;
+        padding: 20px 0 5%;
+        background-size: cover;
+    }
+
+    p {
+        text-shadow: 1px 1px 1px #000;
+    }
+
+    .kb_head {
+        font-size: 38px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-align: center;
+        color: #fff;
+        margin: 0 0 1%;
+    }
+
+    .kb_p {
+        font-size: 22px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        font-weight: 300;
+        text-align: center;
+        color: #fff;
+        margin: 0 0 3%;
+    }
+
+    .kb_p_100 {
+        font-size: 32px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        font-weight: 300;
+        color: #fff;
+        text-align: center;
+        margin: 0 0 2%;
+    }
+
+    .svg_cont {
+        max-width: 1200px;
+        margin: 0 auto;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        align-content: flex-start;
+
+        svg {
+            width: 100px;
+
+            &#Layer_2 {
+                width: 140px;
+            }
+
+            height:auto;
+
+            .cls-1 {
+                stroke: inherit;
+            }
+        }
+    }
+
+    @media only screen and (max-width:1300px) {}
+
+    @media only screen and (max-width:1100px) {
+        .kb_container {
+            padding: 10% 0 5%;
+        }
+
+        .svg_cont {
+            display: flex;
+            max-width: 70%;
+            justify-content: center;
+            align-items: inherit;
+            align-content: inherit;
+            flex-wrap: wrap;
+
+            >div {
+                >svg {
+                    align-self: flex-start;
+                }
+
+                justify-content: center;
+                display: flex;
+                min-height: 120px;
+                min-width:120px;
+            }
+        }
+    }
+
+    @media only screen and (max-width:768px) {
+        .kb_container {
+            background: url(//assets.bareminerals.com/is/image/BareEscentuals/04%5FCleanBG%5F768x868?wid=768);
+            min-height: 610px;
+            padding: 24% 0 10%;
+            background-size: cover;
+        }
+
+        .kb_p_100 {
+            margin: 4% 0;
+        }
+
+        .svg_cont {
+            svg {
+                width: 90px;
+            }
+
+            div {
+                min-height: 100px;
+            }
+        }
+
+    }
+
+    @media only screen and (max-width:680px) {
+        .svg_cont {
+            max-width: 80%;
+        }
+    }
+
+    @media only screen and (max-width:560px) {
+        .kb_head {
+            font-size: 26px;
+        }
+
+        .kb_p {
+            font-size: 18px;
+        }
+
+    }
+
+    @media only screen and (max-width:460px) {
+        .kb_head {
+            font-size: 26px;
+        }
+
+        .kb_p {
+            font-size: 18px;
+        }
+
+        .svg_cont {
+            max-width: 90%;
+        }
+
+    }
+
+    @media only screen and (max-width:415px) {
+        .kb_container {
+            background: url(//assets.bareminerals.com/is/image/BareEscentuals/07_CleanWithoutCompromise_414x906?wid=414);
+            min-height: 770px;
+            padding: 22% 0 0;
+        }
+
+        .svg_cont {
+            max-width: 370px;
+            margin: 0 auto;
+
+            svg {
+                width: 110px;
+
+                &#Layer_2 {
+                    width: 135px;
+
+                }
+            }
+        }
+
+        .kb_head {
+            font-size: 32px;
+        }
+
+        .kb_p {
+            font-size: 18px;
+        }
+    }
+}
+
+
+@media only screen and (max-width:1024px) {
+
+    .slick-next,
+    .slick-prev {
+        display: none !important;
+    }
+}
+
+.selecttone {
+    display: none;
+
+    @media only screen and (max-width:415px) {
+        display: block;
+        font-size: 16px;
+        margin: 4% auto;
+        text-align: center;
+    }
+
+}
+
+
+.rangePaddingRight {
+    padding-left: 5px;
+
+    @media only screen and (max-width:768px) {
+        padding-left: 3px;
+    }
+
+    @media only screen and (max-width:415px) {
+        padding-left: 3px;
+    }
+}
+
+.rangePaddingLeft {
+    padding-right: 5px;
+
+    @media only screen and (max-width:768px) {
+        padding-right: 3px;
+    }
+
+    @media only screen and (max-width:415px) {
+        padding-right: 0;
+    }
+}
+
+
+
+
+
+.range_master_prod .kb_subcat_content {
+    display: none;
+}
+
+.kb_flex_shade_select .kb_subcat_content {
+    display: none;
+}
+
+
+
+.range2_item span {
+    display: none;
+}
+
+.range1_item span {
+    display: none;
+}
+
+.range1_item:hover span {
+    display: block;
+}
+
+.range2_item:hover span {
+    display: block;
+}
+
+span.error,
+.error-message,
+.hazmat {
+    width: 100%;
+    text-align: center;
+}
+
+
+.loader {
+    display: none !important;
+}
+
+.slick-next:before {
+    content: "";
+    color: #000;
+}
+
+.slick-next:hover {
+    border: none;
+}
+
+.slick-next {
+    right: 35px;
+}
+
+.slick-prev {
+    left: 35px;
+}
+
+.slick-prev:hover {
+    border: none;
+}
+
+.slick-prev:before {
+    content: "";
+    color: #000;
+}
+
+.slick-prev,
+.slick-next {
+    z-index: 99;
+    width: 40px;
+    height: 40px;
+
+    svg {
+        opacity: 0.5;
+        width: 32px;
+        height: auto;
+
+
+        svg:hover {
+            opacity: 1;
+            width: 32px;
+            height: auto;
+            border: none;
+        }
+    }
+}

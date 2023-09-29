@@ -1,0 +1,1035 @@
+.loader {
+    display: none !important;
+}
+
+@font-face {
+    font-family: SaolDisplay;
+    src: url(https://www.bareminerals.com/on/demandware.static/-/Sites-BareMinerals_US_CA-Library/default/dwbb8c0ed9/bmfed2017/SaolDisplay-Semibold.woff) format("woff");
+}
+
+.saoltype {
+    font-family: SaolDisplay;
+}
+
+.primary-content,
+#main,
+#wrapper {
+    background: none;
+}
+
+.breadcrumb,
+.clp-title {
+    display: none;
+}
+
+.fullwidth-wrapper.menu-of-links-wrapper {
+    display: none;
+}
+
+.content-asset,
+.breadcrumb,
+#js-certona-campaign1_rr {
+    background-color: #fff;
+}
+
+.clp-title {
+    display: none;
+}
+
+.main {
+    margin: 0 auto;
+    max-width: 1520px;
+
+    * {
+        box-sizing: border-box;
+    }
+
+    h2 {
+        font-size: 42px;
+        text-align: center;
+        margin: 0 0 2%;
+    }
+
+    p {
+        font-size: 22px;
+        letter-spacing: 0.5px;
+        line-height: 1.5;
+        text-align: center;
+        margin: 0 0 2%;
+    }
+
+    @media only screen and (max-width: 768px) {
+        h2 {
+            font-size: 26px;
+        }
+
+        p {
+            font-size: 16px;
+            width: 90%;
+        }
+    }
+}
+
+.visible {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.video {
+
+    overflow: hidden;
+
+    [data-bm-hero-1] {
+        position: relative;
+        max-width: 1520px;
+        margin: 0 auto;
+
+        .img_cont {
+            max-width: 1520px;
+            margin: 0 auto;
+            height: 500px;
+        }
+
+        .kb_subcat_content {
+            width: 46%;
+            text-align: center;
+            padding: 0 2% 0;
+            display: block;
+            margin: 0;
+        }
+
+        .kb_flex_vertical_center_bottom {
+            align-items: flex-end;
+        }
+
+        h1 {
+            font-size: 55px;
+            text-align: center;
+            letter-spacing: 1.6px;
+            color: #fff;
+            margin: 0 0 5%;
+            padding: 0;
+            line-height: 1.17;
+            font-weight: 700;
+            position: relative;
+        }
+
+        p.subTop {
+            font-size: 29px;
+            margin: 0;
+            letter-spacing: 1.2px;
+            line-height: 1.2;
+            padding: 0 15% 0%;
+            color: #000;
+            font-weight: bold;
+        }
+
+        p.sub {
+            font-size: 28px;
+            margin: 0;
+            letter-spacing: 1.2px;
+            line-height: 1.2;
+            padding: 0 15% 4%;
+            color: #000;
+
+            br.hidden {
+                display: none;
+            }
+        }
+
+        .kb_down_arrow {
+            font-size: 30px;
+        }
+
+        a {
+            display: block;
+            position: relative;
+        }
+
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media only screen and (max-width: 1300px) {
+            h1 {
+                font-size: 38px;
+            }
+
+            div.box {
+                height: 240px;
+            }
+
+            p.sub {
+                font-size: 23px;
+            }
+        }
+
+        @media only screen and (max-width: 1100px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            div.box {
+                height: 240px;
+            }
+
+            p.subTop {
+                font-size: 22px;
+            }
+
+            p.sub {
+                font-size: 20px;
+            }
+        }
+
+        @media only screen and (max-width: 900px) {
+            h1 {
+                font-size: 26px;
+            }
+
+            div.box {
+                height: 240px;
+            }
+
+            p.subTop {
+                font-size: 17px;
+            }
+
+            p.sub {
+                font-size: 17px;
+            }
+
+            p.kb_span_btn {
+                font-size: 14px;
+                padding: 10px 30px;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            display: block;
+
+            .kb_subcat_content {
+                width: 55%;
+                text-align: center;
+                padding: 0 0;
+                margin: 4% 0 0;
+            }
+
+            h1 {
+                font-size: 23px;
+                bottom: 0px;
+            }
+
+            p.subTop {
+                font-size: 17px;
+            }
+
+            p.sub {
+                font-size: 13px;
+            }
+
+            p.kb_span_btn {
+                font-size: 10px;
+                padding: 10px 30px;
+            }
+
+            .img_cont {
+                height: 400px;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .img_cont {
+                height: 200px;
+            }
+
+            .kb_flexbox {
+                align-items: center;
+                justify-content: flex-start;
+                flex-direction: column;
+                height: auto;
+                padding: 0;
+                margin: 0;
+            }
+
+            .kb_subcat_content {
+                width: 100%;
+                text-align: center;
+                padding: 0 2% 2%;
+                height: 100%;
+                margin: 0;
+                display: flex;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+            }
+
+            p.subTop {
+                padding: 4% 5% 2%;
+                font-size: 13px;
+            }
+
+            h1 {
+                font-size: 33px;
+                bottom: 0px;
+                padding: 0;
+                margin: 0 auto;
+            }
+
+            p.kb_span_btn {
+                font-size: 17px;
+                padding: 10px 30px;
+            }
+
+            p.sub {
+                font-size: 18px;
+                padding: 0 15% 4%;
+
+                br.hidden {
+                    display: block;
+                }
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .img_cont {
+                height: 168px;
+            }
+        }
+
+        @media only screen and (max-width: 375px) {
+            .img_cont {
+                height: 138px;
+            }
+
+            h1 {
+                font-size: 29px;
+                bottom: 0px;
+                margin: 0 auto;
+                padding: 6% 0 85%;
+            }
+
+            p.sub {
+                font-size: 17px;
+                padding: 0 9% 4%;
+
+                br.hidden {
+                    display: block;
+                }
+            }
+
+            p.kb_span_btn {
+                font-size: 15px;
+            }
+
+            p.subTop {
+                font-size: 12px;
+                padding: 4% 5% 0%;
+            }
+        }
+    }
+}
+
+.section-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(http://assets.bareminerals.com/is/image/BareEscentuals/EC21%5FOurPurpose%5FD%5FStucco?scl=1);
+
+    .inner-nav {
+        width: 80%;
+        background: #fff;
+        padding: 4%;
+        position: relative;
+        top: -70px;
+        margin: 0 auto;
+        display: flex;
+
+        .inner-nav-links {
+            text-align: center;
+            font-size: 22px;
+            width: 33.33%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            span {
+                display: inline-block;
+                font-weight: 700;
+            }
+
+            svg {
+                display: inline-block;
+                height: 16px;
+                margin: 0 3%;
+            }
+        }
+    }
+
+    h2 {
+        padding: 0 0 0;
+    }
+
+    p {
+        padding: 0 0 3%;
+        max-width: 70%;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .inner-nav {
+            padding: 4% 1%;
+            top: 0;
+            margin: 0 0 5%;
+
+            .inner-nav-links {
+                flex-direction: column;
+
+                span {
+                    font-size: 14px;
+                    display: flex;
+                    width: 100%;
+                    text-align: center;
+                    justify-content: center;
+                    line-height: 1.2;
+                    margin: 0 0 5%;
+                }
+
+                svg {
+                    display: inline-block;
+                    height: 10px;
+                    margin: 0 3%;
+                }
+            }
+        }
+
+        p {
+            width: 100%;
+            max-width: 90%;
+        }
+    }
+}
+
+.section-3-column {
+    margin: 0 0 2%;
+    padding: 3% 2%;
+    position: relative;
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        padding: 10% 0 24% !important;
+    }
+
+    .col-cont {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .col-item.none {
+        padding: 0 0 24%;
+        justify-content: flex-start;
+    }
+
+    .col-item-middle {
+        width: 40%;
+
+        img {
+            width: 100%;
+        }
+
+        img.social_icons {
+            width: auto;
+            margin: 0 0 0 4%;
+        }
+    }
+
+    img {
+        margin: 0 auto;
+    }
+
+    .col-item {
+        width: 30%;
+    }
+
+    .col-right {
+        width: 70%;
+
+        .col-right-inner {
+            display: flex;
+            flex-direction: row;
+            padding: 2% 0;
+        }
+
+        .col-item-middle {
+            width: 50%;
+        }
+
+        .col-item.end {
+            width: 50%;
+            padding: 14% 9% 0 2%;
+        }
+    }
+
+    .col-item.end {
+        padding: 0 3% 0 5%;
+    }
+
+    &.texture {
+        background: url("//assets.bareminerals.com/is/image/BareEscentuals/01_STUCCO_1_3040x3699?wid=1520");
+    }
+
+    h2 {
+        text-align: left;
+        font-size: 48px;
+        margin: 0 0 5%;
+
+        span {
+            display: block;
+            font-size: 130%;
+        }
+    }
+
+    h3 {
+        font-size: 33px;
+        letter-spacing: 1px;
+        margin: 0 0 5%;
+        font-weight: 300;
+    }
+
+    p {
+        text-align: left;
+    }
+
+    ul {
+        margin: 0 0 14%;
+        padding: 0;
+    }
+
+    li,
+    a {
+        font-size: 20px;
+        list-style: none;
+        margin: 0 0 3%;
+    }
+
+    li {
+        display: flex;
+    }
+
+    a {
+        text-transform: uppercase;
+        text-decoration: underline;
+        margin: 0 0 5%;
+        display: block;
+        font-weight: 700;
+    }
+
+    .packaging-text {
+        font-size: 43px;
+        padding: 0 0 5% 0;
+        text-transform: capitalize;
+        font-weight: 300;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .sticky {
+            position: relative;
+            padding: 5% 0 !important;
+        }
+
+        .packaging-text {
+            font-size: 33px;
+            padding: 0 0 3%;
+            text-transform: capitalize;
+            text-align: center;
+        }
+
+        .col-item.none {
+            padding: 0;
+            justify-content: flex-start;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 25px;
+            padding: 2% 0 0%;
+        }
+
+        a {
+            font-size: 16px;
+            text-align: center;
+            margin: 0 0 0%;
+        }
+
+        li {
+            font-size: 16px;
+        }
+
+        p {
+            padding: 0 0 3%;
+            width: 100%;
+        }
+
+        .col-cont {
+            flex-direction: column;
+        }
+
+        .col-item,
+        .col-item-middle {
+            width: 100%;
+        }
+
+        .col-right {
+            width: 100%;
+
+            .col-right-inner {
+                display: flex;
+                flex-direction: column;
+                padding: 2% 0;
+            }
+
+            .col-item-middle {
+                width: 100%;
+            }
+
+            .col-item.end {
+                width: 100%;
+                padding: 2%;
+            }
+        }
+
+        h3 {
+            font-size: 22px;
+            padding: 4% 0 0;
+        }
+
+        .col-item.end {
+            padding: 0 2%;
+
+            p {
+                text-align: center;
+            }
+
+            .girl_logos {
+                display: flex;
+                justify-content: center;
+                padding: 4% 0;
+
+                img {
+                    width: 35%;
+                    margin: 0;
+                    display: inline-block;
+                }
+            }
+        }
+
+        .hidden {
+            display: block !important;
+            text-align: center;
+        }
+
+        img {
+            margin: 0 auto 5%;
+            width: 100%;
+        }
+
+        .visible {
+            display: none;
+        }
+
+        ul {
+            margin: 0 0 2%;
+        }
+    }
+}
+
+.dogood {
+    margin: 0 0 2%;
+
+    h2 {
+        text-align: center;
+    }
+
+    p {
+        padding: 0 20%;
+    }
+
+    .col-cont {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0 3%;
+    }
+
+    .col-item.none {
+        justify-content: flex-start;
+    }
+
+    .col-item {
+        width: 33.33%;
+
+        h3 {
+            text-align: left;
+
+            span {
+                display: block;
+                font-size: 130%;
+            }
+        }
+
+        p {
+            text-align: left;
+        }
+    }
+
+    .col-item.end {
+        padding: 5% 0 0 5%;
+    }
+
+    .disc {
+        font-size: 12px;
+    }
+}
+
+.sustainability {
+    display: flex;
+
+    .section1 {
+        width: 35%;
+
+        h2 {
+            text-align: left;
+        }
+
+        p {
+            text-align: left;
+            font-size: 36px;
+            line-height: 1.2;
+        }
+    }
+
+    .section2 {
+        width: 65%;
+
+        .nav_section {
+            display: flex;
+            border-bottom: 1px solid #000;
+        }
+
+        .nav_section_link {
+            width: 25%;
+            text-align: center;
+            padding: 3% 0;
+            font-size: 22px;
+            font-weight: 700;
+        }
+    }
+
+    .section_div {
+        display: flex;
+
+        div {
+            width: 50%;
+        }
+
+        .section_div_text {
+            padding: 3% 3% 3% 6%;
+        }
+
+        h3,
+        p {
+            text-align: left;
+        }
+    }
+}
+
+[data-bm-hero] {
+    position: relative;
+    max-width: 1520px;
+    margin: 0 auto;
+
+    .img_cont {
+        max-width: 1520px;
+        margin: 0 auto;
+    }
+
+    .kb_subcat_content {
+        width: 46%;
+        text-align: center;
+        padding: 0 2% 4%;
+        display: block;
+        margin: 0;
+    }
+
+    .kb_flex_vertical_center_bottom {
+        align-items: flex-end;
+    }
+
+    h3 {
+        font-size: 34px;
+        text-align: center;
+        letter-spacing: 1.6px;
+        color: #000;
+        margin: 0 0 5%;
+        padding: 0;
+        line-height: 1.17;
+        font-weight: 300;
+        position: relative;
+    }
+
+    p.subTop {
+        font-size: 29px;
+        margin: 0;
+        letter-spacing: 1.2px;
+        line-height: 1.2;
+        padding: 0 15% 2%;
+        color: #000;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 24px;
+        margin: 0;
+        letter-spacing: 1.2px;
+        line-height: 1.2;
+        padding: 0 15% 4%;
+        color: #000;
+    }
+
+    .kb_down_arrow {
+        font-size: 30px;
+    }
+
+
+    a {
+        display: block;
+        position: relative;
+    }
+
+    @media only screen and (max-width: 1300px) {
+        h1 {
+            font-size: 38px;
+        }
+
+        div.box {
+            height: 240px;
+        }
+
+        p.sub {
+            font-size: 23px;
+        }
+    }
+
+    @media only screen and (max-width: 1100px) {
+        h1 {
+            font-size: 32px;
+        }
+
+        div.box {
+            height: 240px;
+        }
+
+        p.subTop {
+            font-size: 22px;
+        }
+
+        p.sub {
+            font-size: 20px;
+        }
+    }
+
+    @media only screen and (max-width: 900px) {
+        h1 {
+            font-size: 26px;
+        }
+
+        div.box {
+            height: 240px;
+        }
+
+        p.subTop {
+            font-size: 17px;
+        }
+
+        p.sub {
+            font-size: 17px;
+        }
+
+        p.kb_span_btn {
+            font-size: 14px;
+            padding: 10px 30px;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        display: block;
+
+        .kb_subcat_content {
+            width: 55%;
+            text-align: center;
+            padding: 0 0;
+            margin: 4% 0 0;
+        }
+
+        h1 {
+            font-size: 23px;
+            bottom: 0px;
+        }
+
+        p.subTop {
+            font-size: 17px;
+        }
+
+        p.sub {
+            font-size: 13px;
+        }
+
+        p.kb_span_btn {
+            font-size: 10px;
+            padding: 10px 30px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .kb_flexbox {
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+            height: auto;
+            padding: 0;
+            margin: 0;
+        }
+
+        .kb_subcat_content {
+            width: 100%;
+            text-align: center;
+            padding: 0 2% 2%;
+            height: auto;
+            margin: 4% 0 0;
+        }
+
+        p.subTop {
+            padding: 4% 5% 2%;
+            font-size: 13px;
+        }
+
+        h1 {
+            font-size: 33px;
+            bottom: 0px;
+            padding: 4% 5% 82%;
+            margin: 0 auto;
+        }
+
+        p.kb_span_btn {
+            font-size: 17px;
+            padding: 10px 30px;
+        }
+
+        p.sub {
+            font-size: 18px;
+            padding: 0 15% 4%;
+
+            br.hidden {
+                display: block;
+            }
+        }
+
+        h3 {
+            font-size: 18px;
+            text-align: center;
+            letter-spacing: 1.6px;
+            color: #000;
+            margin: 0 0 5%;
+            padding: 8% 2% 0;
+            line-height: 1.17;
+            font-weight: 300;
+            position: relative;
+        }
+
+        .review_copy {
+            font-size: 16px;
+        }
+    }
+
+    @media only screen and (max-width: 375px) {
+        h1 {
+            font-size: 29px;
+            bottom: 0px;
+            margin: 0 auto;
+            padding: 6% 0 85%;
+        }
+
+        p.sub {
+            font-size: 17px;
+            padding: 0 9% 4%;
+
+            br.hidden {
+                display: block;
+            }
+        }
+
+        p.kb_span_btn {
+            font-size: 15px;
+        }
+
+        p.subTop {
+            font-size: 12px;
+            padding: 4% 5% 0%;
+        }
+    }
+}
+
+.details {
+    background-color: #000;
+    font-size: 20px;
+
+    p.details {
+        cursor: pointer;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0 auto;
+        padding: 1% 0;
+    }
+
+    color: #fff;
+
+    div {
+        background: #000;
+
+        p.desc {
+            text-align: center;
+            letter-spacing: 1px;
+            font-size: 17px;
+            padding: 2%;
+            display: none;
+            color: #fff;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        font-size: 15px;
+        padding: 2% 0 0;
+
+        div {
+            p.desc {
+                font-size: 9px;
+                padding: 2%;
+                margin: 0;
+                width: 100%;
+            }
+        }
+    }
+}
