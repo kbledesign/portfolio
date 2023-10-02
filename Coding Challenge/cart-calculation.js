@@ -23,7 +23,7 @@ const cartScenario = {
 
 const calculateOrderOnSubmit = () => {
     const newCart = { ...shoppingCart };
-    const currentCart = cartScenario.option1; // Change this to option2 if needed
+    const currentCart = cartScenario.option2; // Change this to option2 if needed
 
     const cartQty = currentCart.reduce((acc, item) => {
         acc[item] = (acc[item] || 0) + 1;
@@ -67,10 +67,10 @@ const calculateOrderOnSubmit = () => {
 };
 
 const calculateSubtotal = currentCart =>
-    currentCart.reduce((total, sku) => total + SKUS[sku].price, 0);
+    currentCart.reduce((acc, sku) => acc + SKUS[sku].price, 0);
 
 const checkCartForDiscount = currentCart => {
-    let discountData = {
+    let orderPromotions = {
         discountAmount: 0,
         discount: [],
         newFreeGift: []
@@ -83,21 +83,21 @@ const checkCartForDiscount = currentCart => {
         const promoDiscountAmount = 10;
         const discountAmount = validatePromoA.length * promoDiscountAmount;
 
-        if (!discountData.discount.includes("Buy 2 for $100")) {
-            discountData.discount.push("Buy 2 for $100");
+        if (!orderPromotions.discount.includes("Buy 2 for $100")) {
+            orderPromotions.discount.push("Buy 2 for $100");
         }
-        discountData.discountAmount = discountAmount;
+        orderPromotions.discountAmount = discountAmount;
     }
 
     if (validatePromoB.length >= 2) {
-        discountData.discountAmount += SKUS["B"].price;
-        discountData.newFreeGift.push("B");
+        orderPromotions.discountAmount += SKUS["B"].price;
+        orderPromotions.newFreeGift.push("B");
 
-        if (!discountData.discount.includes("Buy 2 get 1 Free!")) {
-            discountData.discount.push("Buy 2 get 1 Free!");
+        if (!orderPromotions.discount.includes("Buy 2 get 1 Free!")) {
+            orderPromotions.discount.push("Buy 2 get 1 Free!");
         }
     }
-    return discountData;
+    return orderPromotions;
 };
 
 const calculateTotalCost = (newSubTotal, discountTotal) =>
@@ -105,33 +105,34 @@ const calculateTotalCost = (newSubTotal, discountTotal) =>
 
 const showCartItems = currentCart => {
     const { products, price, quantity, discount, freeGift } = currentCart;
-    const cartListCont = document.querySelector(".order-items");
 
     let cartListItems = products.map((sku, index) => `
-        <li class="order-item">
-            <div class="product-info product-name-cont">
-                <div class="product-name">${sku}</div>
-                <div class="product-price">$${price[index]}</div>
-                <div class="product-quantity">${quantity[index]}</div>
-                <div class="product-discount">${discount[index] || ""}</div>
-            </div>
-        </li>
+    <li class="order-item">
+        <div class="product-info product-name-cont">
+        <div class="product-name">${sku}</div>
+        <div class="product-price">$${price[index]}</div>
+        <div class="product-quantity">${quantity[index]}</div>
+        <div class="product-discount">${discount[index] || ""}</div>
+        </div>
+    </li>
     `);
 
     if (freeGift.length > 0) {
         cartListItems.push(`
-            <li class="order-item">
-                <div class="product-info product-name-cont">
-                    <div class="product-name">${freeGift[0]}</div>
-                    <div class="product-price">Free</div>
-                    <div class="product-quantity">1</div>
-                    <div class="product-discount">$${SKUS[freeGift[0]].price} Value</div>
-                </div>
-            </li>
+        <li class="order-item">
+            <div class="product-info product-name-cont">
+            <div class="product-name">${freeGift[0]}</div>
+            <div class="product-price">Free</div>
+            <div class="product-quantity">1</div>
+            <div class="product-discount">$${SKUS[freeGift[0]].price} Value</div>
+            </div>
+        </li>
         `);
     }
 
     const cartListItemsTotal = cartListItems.join("");
+
+    const cartListCont = document.querySelector(".order-items");
     cartListCont.innerHTML = cartListItemsTotal;
 };
 
