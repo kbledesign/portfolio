@@ -5,14 +5,14 @@ const SKUS = {
     D: { name: "D", price: 20 }
 };
 
-const shoppingCart = {
+let shoppingCart = {
     products: [],
     quantity: [],
     price: [],
-    freeGift: [],
     discount: [],
     subtotal: 0,
     discountTotal: 0,
+    freeGift: [],
     totalCost: 0
 };
 
@@ -23,8 +23,7 @@ const cartScenario = {
 
 const calculateOrderOnSubmit = () => {
     const newCart = { ...shoppingCart };
-
-    const currentCart = cartScenario.option2; // Change this to option2 if needed
+    const currentCart = cartScenario.option1; // Change this to option2 if needed
 
     const cartQty = currentCart.reduce((acc, item) => {
         acc[item] = (acc[item] || 0) + 1;
@@ -45,7 +44,6 @@ const calculateOrderOnSubmit = () => {
     const newSubTotal = calculateSubtotal(currentCart);
     const newDiscountTotal = checkCartForDiscount(currentCart);
     const { discountAmount, discount, newFreeGift } = newDiscountTotal;
-
     const newTotalCost = calculateTotalCost(newSubTotal, discountAmount);
 
     newCart.subtotal = newSubTotal;
@@ -53,8 +51,7 @@ const calculateOrderOnSubmit = () => {
     newCart.discountTotal = discountAmount;
     newCart.totalCost = newTotalCost;
     newCart.freeGift = newFreeGift;
-
-    Object.assign(shoppingCart, newCart);
+    shoppingCart = { ...shoppingCart, ...newCart }
 
     showCartItems(shoppingCart);
 
