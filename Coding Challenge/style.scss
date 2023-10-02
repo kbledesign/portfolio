@@ -42,6 +42,10 @@ fieldset {
     border: 3px solid rgba(200, 200, 200, 0.2);
 }
 
+legend {
+    font-weight: bold;
+}
+
 /* Container Styles */
 div.container {
 
@@ -114,6 +118,10 @@ div.container {
         margin: 1%;
         padding: 3%;
         border-bottom: 2px solid $secondary-color;
+    }
+
+    div.form-group {
+        padding: 1%;
     }
 
     /* Order Items List */

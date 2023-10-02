@@ -39,6 +39,10 @@ fieldset {
   border: 3px solid rgba(200, 200, 200, 0.2);
 }
 
+legend {
+  font-weight: bold;
+}
+
 /* Container Styles */
 div.container {
   /* Brand Header */
@@ -103,6 +107,9 @@ div.container section.order-details {
   margin: 1%;
   padding: 3%;
   border-bottom: 2px solid rgba(240, 240, 240, 0.6);
+}
+div.container div.form-group {
+  padding: 1%;
 }
 div.container ul.order-items {
   padding: 0;
