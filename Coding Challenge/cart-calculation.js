@@ -2,8 +2,7 @@ const SKUS = {
     A: { name: "A", price: 60 },
     B: { name: "B", price: 70 },
     C: { name: "C", price: 10 },
-    D: { name: "D", price: 20 },
-    FREE: { name: "FREE B", price: 0 }
+    D: { name: "D", price: 20 }
 };
 
 const shoppingCart = {
@@ -23,24 +22,24 @@ const cartScenario = {
 };
 
 const calculateOrderOnSubmit = () => {
-    const newTempCart = { ...shoppingCart };
+    const newCart = { ...shoppingCart };
 
-    const currentCart = cartScenario.option2; // Change this to option2 if needed
+    const currentCart = cartScenario.option1; // Change this to option2 if needed
 
-    const result = currentCart.reduce((acc, item) => {
+    const cartQty = currentCart.reduce((acc, item) => {
         acc[item] = (acc[item] || 0) + 1;
         return acc;
     }, {});
 
-    const arrayOfProductObjs = Object.entries(result).map(([name, quantity]) => ({
+    const cartProdNameQty = Object.entries(cartQty).map(([name, quantity]) => ({
         name,
         quantity
     }));
 
-    arrayOfProductObjs.forEach(item => {
-        newTempCart.products.push(item.name);
-        newTempCart.quantity.push(item.quantity);
-        newTempCart.price.push(SKUS[item.name].price);
+    cartProdNameQty.forEach(item => {
+        newCart.products.push(item.name);
+        newCart.quantity.push(item.quantity);
+        newCart.price.push(SKUS[item.name].price);
     });
 
     const newSubTotal = calculateSubtotal(currentCart);
@@ -49,13 +48,13 @@ const calculateOrderOnSubmit = () => {
 
     const newTotalCost = calculateTotalCost(newSubTotal, discountAmount);
 
-    newTempCart.subtotal = newSubTotal;
-    newTempCart.discount = discount;
-    newTempCart.discountTotal = discountAmount;
-    newTempCart.totalCost = newTotalCost;
-    newTempCart.freeGift = newFreeGift;
+    newCart.subtotal = newSubTotal;
+    newCart.discount = discount;
+    newCart.discountTotal = discountAmount;
+    newCart.totalCost = newTotalCost;
+    newCart.freeGift = newFreeGift;
 
-    Object.assign(shoppingCart, newTempCart);
+    Object.assign(shoppingCart, newCart);
 
     showCartItems(shoppingCart);
 
@@ -81,7 +80,7 @@ const checkCartForDiscount = currentCart => {
     };
 
     const validatePromoA = currentCart.filter(product => product === "A");
-    const filterProductsB = currentCart.filter(product => product === "B");
+    const validatePromoB = currentCart.filter(product => product === "B");
 
     if (validatePromoA.length >= 2) {
         const promoDiscountAmount = 10;
@@ -93,7 +92,7 @@ const checkCartForDiscount = currentCart => {
         discountData.discountAmount = discountAmount;
     }
 
-    if (filterProductsB.length >= 2) {
+    if (validatePromoB.length >= 2) {
         discountData.discountAmount += SKUS["B"].price;
         discountData.newFreeGift.push("B");
 
