@@ -24,7 +24,7 @@ const cartScenario = {
 const calculateOrderOnSubmit = () => {
     const newCart = { ...shoppingCart };
 
-    const currentCart = cartScenario.option1; // Change this to option2 if needed
+    const currentCart = cartScenario.option2; // Change this to option2 if needed
 
     const cartQty = currentCart.reduce((acc, item) => {
         acc[item] = (acc[item] || 0) + 1;

@@ -5,7 +5,7 @@
 $secondary-color: rgba(240, 240, 240, 0.6);
 
 /* Reset Styles */
-body {
+html {
     padding: 0;
     margin: 0;
     font-size: 16px;
@@ -76,6 +76,18 @@ div.container {
             }
         }
 
+        @media screen and (max-width: 460px) {
+            padding: 5% 1%;
+
+            a {
+                img {
+                    max-width: 50%;
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+
+        }
     }
 
     /* Main Content */
@@ -131,16 +143,25 @@ div.container {
 
         li.order-item {
             list-style: none;
-            padding: 0;
+            padding: 1%;
+            text-align: center;
+
+            &:nth-child(odd) {
+                background: rgba(200, 200, 200, 0.2);
+            }
 
             .product-info {
                 display: flex;
 
                 div {
                     width: 25%;
+                    align-self: center;
+                    text-align: center;
                 }
             }
         }
+
+
     }
 
     /* Grid Row and Columns */
@@ -169,6 +190,8 @@ div.container {
 
         .float-th {
             font-weight: bold;
+            padding: 1%;
+            text-align: center;
         }
 
         .float-cell {
@@ -194,11 +217,15 @@ footer {
 /* Label Cursor */
 label {
     cursor: pointer;
+
+    &.label__block {
+        display: block;
+    }
 }
 
 /* Media Query for Small Screens */
 @media screen and (max-width: 460px) {
-    body {
-        font-size: 12px;
+    html {
+        font-size: 16px;
     }
 }

@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,400&family=Poppins:ital,wght@0,300;0,700;1,300;1,500&family=Roboto&display=swap");
 /* Variables */
 /* Reset Styles */
-body {
+html {
   padding: 0;
   margin: 0;
   font-size: 16px;
@@ -76,6 +76,16 @@ div.container .brand-header a h1 {
   font-size: 1.4rem;
   margin: 0;
 }
+@media screen and (max-width: 460px) {
+  div.container .brand-header {
+    padding: 5% 1%;
+  }
+  div.container .brand-header a img {
+    max-width: 50%;
+    display: block;
+    margin: 0 auto;
+  }
+}
 div.container main.content {
   max-width: 700px;
   padding: 1%;
@@ -117,13 +127,19 @@ div.container ul.order-items {
 }
 div.container ul.order-items li.order-item {
   list-style: none;
-  padding: 0;
+  padding: 1%;
+  text-align: center;
+}
+div.container ul.order-items li.order-item:nth-child(odd) {
+  background: rgba(200, 200, 200, 0.2);
 }
 div.container ul.order-items li.order-item .product-info {
   display: flex;
 }
 div.container ul.order-items li.order-item .product-info div {
   width: 25%;
+  align-self: center;
+  text-align: center;
 }
 div.container div.grid-row {
   display: grid;
@@ -144,6 +160,8 @@ div.container div.float-row.clearfix::after {
 }
 div.container div.float-row .float-th {
   font-weight: bold;
+  padding: 1%;
+  text-align: center;
 }
 div.container div.float-row .float-cell {
   float: left;
@@ -166,10 +184,13 @@ footer p {
 label {
   cursor: pointer;
 }
+label.label__block {
+  display: block;
+}
 
 /* Media Query for Small Screens */
 @media screen and (max-width: 460px) {
-  body {
-    font-size: 12px;
+  html {
+    font-size: 16px;
   }
 }/*# sourceMappingURL=style.css.map */
