@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FBB Code Challenge</title>
+    <meta name="description" content="FBB coding challenge">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- First Header (Brand Name and Logo) -->
+        <header class="brand-header">
+            <div class="brand-logo">
+                <!-- <img src="brand-logo.png" alt="Brand Logo"> -->
+                <a href="https://www.fbbrands.com/">
+                    <img src="https://www.fbbrands.com/wp-content/uploads/2015/10/homepage-top-left.png"
+                        alt="Full Beauty Brands">
+                    <h1 class="brand-logo__text">FBB Code Challenge</h1>
+                </a>
+            </div>
+        </header>
+        <main class="content">
+
+            <!-- Second Header (Steps of Checkout) -->
+            <nav class="checkout-header" aria-label="Checkout Steps">
+                <ul class="checkout-header__list">
+                    <li class="checkout-header__item"><a href="#shipping-section">Shipping</a></li>
+                    <li class="checkout-header__item"><a href="#billing-section">Billing</a></li>
+                    <li class="checkout-header__item"><a href="#order-details-section">Review</a></li>
+                </ul>
+            </nav>
+
+            <!-- Content Area for Shipping Information -->
+            <section class="order-details" aria-labelledby="shipping-section">
+                <div class="section">
+                    <h2 id="shipping-section" class="section__title">1. Shipping Information</h2>
+                    <p>Please provide accurate shipping details for successful delivery.</p>
+                    <!-- Place your shipping information here -->
+                    <div class="shipping-information">
+                        <form>
+                            <fieldset>
+                                <legend>Contact Information</legend>
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="email" required
+                                        placeholder="example@example.com" aria-label="Email" autocomplete="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone:</label>
+                                    <input type="tel" id="phone" name="phone" required placeholder="123-456-7890"
+                                        aria-label="Phone">
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Shipping Information</legend>
+                                <div class="form-group">
+                                    <label for="full-name">Full Name:</label>
+                                    <input type="text" id="full-name" name="full-name" required placeholder="John Doe"
+                                        aria-label="Full Name" autocomplete="name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="address">Address:</label>
+                                    <input type="text" id="address" name="address" required placeholder="123 Main St"
+                                        aria-label="Address">
+                                </div>
+                                <div class="form-group">
+                                    <label for="city">City:</label>
+                                    <input type="text" id="city" name="city" required placeholder="Anytown"
+                                        aria-label="City">
+                                </div>
+                                <div class="form-group">
+                                    <label for="state">State:</label>
+                                    <input type="text" id="state" name="state" required placeholder="CA"
+                                        aria-label="State">
+                                </div>
+                                <div class="form-group">
+                                    <label for="zip-code">Zip Code:</label>
+                                    <input type="text" id="zip-code" name="zip-code" required placeholder="12345"
+                                        aria-label="Zip Code">
+                                </div>
+                            </fieldset>
+                            <div class="form-group">
+                                <!-- Add the "Continue" button -->
+                                <button type="submit" aria-label="Continue">Continue</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Content Area for Billing Information -->
+            <section class="order-details" aria-labelledby="billing-section">
+                <div class="section">
+                    <h2 id="billing-section" class="section__title">2. Billing Information</h2>
+                    <p>Securely enter payment details for a smooth transaction.</p>
+                    <form id="payment-form" action="process_payment.php" method="post">
+                        <fieldset>
+                            <legend>Card Details</legend>
+                            <!-- Credit Card Number -->
+                            <div class="form-group">
+                                <label for="credit-card">Credit Card Number:</label>
+                                <input type="text" id="credit-card" name="credit-card" required
+                                    aria-label="Credit Card Number" autocomplete="cc-number">
+                                <!-- Error message for card number -->
+                                <div role="alert" id="credit-card-error" aria-live="polite"></div>
+                            </div>
+
+                            <!-- Expiration Date -->
+                            <div class="form-group">
+                                <label for="expiration-date">Expiration Date:</label>
+                                <div>
+                                    <input type="text" id="expiration-month" name="expiration-month" required
+                                        aria-label="Expiration Month" placeholder="MM" autocomplete="cc-exp-month">
+                                    <span> / </span>
+                                    <input type="text" id="expiration-year" name="expiration-year" required
+                                        aria-label="Expiration Year" placeholder="YY" autocomplete="cc-exp-year">
+                                </div>
+                                <!-- Error message for expiration date -->
+                                <div role="alert" id="expiration-date-error" aria-live="polite"></div>
+                            </div>
+
+                            <!-- CVV (Card Verification Value) -->
+                            <div class="form-group">
+                                <label for="cvv">CVV:</label>
+                                <input type="text" id="cvv" name="cvv" required aria-label="CVV" autocomplete="cc-csc">
+                                <!-- Error message for CVV -->
+                                <div role="alert" id="cvv-error" aria-live="polite"></div>
+                            </div>
+                        </fieldset>
+
+                        <!-- Cardholder's Name -->
+                        <div class="form-group">
+                            <label for="cardholder-name">Cardholder's Name:</label>
+                            <input type="text" id="cardholder-name" name="cardholder-name" required
+                                aria-label="Cardholder's Name" autocomplete="cc-name">
+                        </div>
+
+                        <!-- Billing Address -->
+                        <fieldset>
+                            <legend>Billing Address</legend>
+                            <!-- Billing Address Line -->
+                            <div class="form-group">
+                                <!-- Checkbox input with label -->
+                                <input type="checkbox" id="same-as-billing" name="same-as-billing"
+                                    aria-labelledby="same-as-billing-label">
+                                <label for="same-as-billing" id="same-as-billing-label">Same as Shipping Address</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="billing-address">Address:</label>
+                                <input type="text" id="billing-address" name="billing-address" required
+                                    aria-label="Billing Address">
+                            </div>
+                            <!-- Billing City -->
+                            <div class="form-group">
+                                <label for="billing-city">City:</label>
+                                <input type="text" id="billing-city" name="billing-city" required
+                                    aria-label="Billing City">
+                            </div>
+                            <!-- Billing State -->
+                            <div class="form-group">
+                                <label for="billing-state">State:</label>
+                                <select id="billing-state" name="billing-state" required aria-label="Billing State">
+                                    <option value="" disabled selected>Select State</option>
+                                    <option value="NY">New York</option>
+                                    <option value="CA">California</option>
+                                    <!-- Add more options for other states -->
+                                </select>
+                                <!-- Error message for billing state -->
+                                <div role="alert" id="billing-state-error" aria-live="polite"></div>
+                            </div>
+                            <!-- Billing Zip Code -->
+                            <div class="form-group">
+                                <label for="billing-zip-code">Zip Code:</label>
+                                <input type="text" id="billing-zip-code" name="billing-zip-code" required
+                                    aria-label="Billing Zip Code">
+                            </div>
+                        </fieldset>
+
+                        <!-- Submit Button -->
+                        <div>
+                            <button type="submit">Continue</button>
+                        </div>
+                    </form>
+
+                </div>
+            </section>
+
+            <!-- Order Details -->
+            <section class="order-details" aria-labelledby="order-details-section">
+                <div class="section">
+                    <h2 id="order-details-section" class="section__title">3. Review Order</h2>
+                    <p><strong>Order Details:</strong> Ensure all order information is correct before finalizing the
+                        purchase.</p>
+
+                    <!-- 3 CSS methods for displaying items -->
+                    <div class="float-row clearfix product-name-cont">
+                        <div class="float-th float-cell">Name:</div>
+                        <div class="float-th float-cell">Price:</div>
+                        <div class="float-th float-cell">Quantity:</div>
+                        <div class="float-th float-cell">Discount:</div>
+                    </div>
+
+                    <!-- #1 Option: flex div -->
+                    <ul class="order-items">
+                        <li class="order-item">
+                            <div class="product-info product-name-cont">
+                                <div class="product-name">Product 1</div>
+                                <div class="product-price">Price: $20.00</div>
+                                <div class="product-quantity">Quantity: 2</div>
+                                <div class="product-discount">Discount: $5.00</div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!-- #2 Option: Grid div -->
+                    <!-- <div class="grid-row product-name-cont">
+                        <div class="grid-col">Product 2</div>
+                        <div class="grid-col">Price: $15.00</div>
+                        <div class="grid-col">Quantity: 2</div>
+                        <div class="grid-col">Discount: $5.00</div>
+                    </div> -->
+
+                    <!-- #3 Option: floating div -->
+                    <!-- <div class="float-row clearfix product-name-cont">
+                        <div class="float-cell">Product 2</div>
+                        <div class="float-cell">Price: $15.00</div>
+                        <div class="float-cell">Quantity: 2</div>
+                        <div class="float-cell">Discount: $5.00</div>
+                    </div> -->
+
+                </div>
+                <hr>
+                <div class="section product-name-cont">
+                    <h4 class="section__subtitle">Subtotal: <span class="sub-total" aria-live="polite">0.00</span>
+                    </h4>
+                    <h4 class="section__subtitle">Discount: <span class="discount-total" aria-live="polite">0.00</span>
+                    </h4>
+                    <h3 class="section__subtitle">Total: <span class="order-total" aria-live="polite">0.00</span>
+                    </h3>
+
+                </div>
+                <!-- Submit Button -->
+                <div>
+                    <button type="submit">Submit Payment</button>
+                </div>
+            </section>
+
+        </main>
+    </div>
+    <footer class="footer">
+        <p>FBB UI Coding Challenge</p>
+    </footer>
+    <script src="cart-calculation.js"></script>
+</body>
+
+</html>
