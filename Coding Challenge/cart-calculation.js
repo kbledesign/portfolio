@@ -20,8 +20,7 @@ const cartScenario = {
     option1: ['A', 'A', 'B', 'C', 'C', 'D'],
     option2: ['A', 'A', 'A', 'A', 'A', 'B', 'B', 'C', 'D']
 };
-
-const calculateOrderOnSubmit = () => {
+const calculateOrder = () => {
     const newCart = { ...shoppingCart };
     const currentCart = cartScenario.option2; // Change this to option2 if needed
 
@@ -42,7 +41,7 @@ const calculateOrderOnSubmit = () => {
     });
 
     const newSubTotal = calculateSubtotal(currentCart);
-    const newDiscountTotal = checkCartForDiscount(currentCart);
+    const newDiscountTotal = validateActivePromos(currentCart);
     const { discountAmount, discount, newFreeGift } = newDiscountTotal;
     const newTotalCost = calculateTotalCost(newSubTotal, discountAmount);
 
@@ -69,7 +68,7 @@ const calculateOrderOnSubmit = () => {
 const calculateSubtotal = currentCart =>
     currentCart.reduce((acc, sku) => acc + SKUS[sku].price, 0);
 
-const checkCartForDiscount = currentCart => {
+const validateActivePromos = currentCart => {
     let orderPromotions = {
         discountAmount: 0,
         discount: [],
@@ -103,8 +102,8 @@ const checkCartForDiscount = currentCart => {
 const calculateTotalCost = (newSubTotal, discountTotal) =>
     newSubTotal - discountTotal;
 
-const showCartItems = currentCart => {
-    const { products, price, quantity, discount, freeGift } = currentCart;
+const showCartItems = updatedCart => {
+    const { products, price, quantity, discount, freeGift } = updatedCart;
 
     let cartListItems = products.map((sku, index) => `
     <li class="order-item">
@@ -136,4 +135,6 @@ const showCartItems = currentCart => {
     cartListCont.innerHTML = cartListItemsTotal;
 };
 
-calculateOrderOnSubmit();
+window.onload = () => {
+    calculateOrder();
+}
