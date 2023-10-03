@@ -131,16 +131,16 @@
                             </div>
                         </fieldset>
 
-                        <!-- Cardholder's Name -->
-                        <div class="form-group">
-                            <label for="cardholder-name">Cardholder's Name:</label>
-                            <input type="text" id="cardholder-name" name="cardholder-name" required
-                                aria-label="Cardholder's Name" autocomplete="cc-name">
-                        </div>
-
                         <!-- Billing Address -->
                         <fieldset>
                             <legend>Billing Address</legend>
+
+                            <!-- Cardholder's Name -->
+                            <div class="form-group">
+                                <label for="cardholder-name">Cardholder's Name:</label>
+                                <input type="text" id="cardholder-name" name="cardholder-name" required
+                                    aria-label="Cardholder's Name" autocomplete="cc-name">
+                            </div>
                             <!-- Billing Address Line -->
                             <div class="form-group">
                                 <label for="billing-address">Address:</label>
@@ -228,13 +228,18 @@
                 </div>
                 <hr>
                 <div class="section product-name-cont">
-                    <h4 class="section__subtitle">Subtotal: <span class="sub-total" aria-live="polite">0.00</span>
-                    </h4>
-                    <h4 class="section__subtitle">Discount: <span class="discount-total" aria-live="polite">0.00</span>
-                    </h4>
-                    <h3 class="section__subtitle">Total: <span class="order-total" aria-live="polite">0.00</span>
-                    </h3>
-
+                    <span class="section__subtitle"><strong>Subtotal:</strong> <span class="sub-total"
+                            aria-live="polite">0.00</span>
+                    </span>
+                    |
+                    <span class="section__subtitle"><strong>Discount:</strong> <span class="discount-total"
+                            aria-live="polite">0.00</span>
+                    </span>
+                    |
+                    <span class="section__subtitle"><strong>Total</strong>: <span class="order-total"
+                            aria-live="polite">0.00</span>
+                    </span>
+                    <hr>
                 </div>
                 <!-- Submit Button -->
                 <div>
