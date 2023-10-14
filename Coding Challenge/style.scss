@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,400&family=Poppins:ital,wght@0,300;0,700;1,300;1,500&family=Roboto&display=swap');
 
 /* Variables */
-$secondary-color: rgba(240, 240, 240, 0.6);
+$secondary-color: rgba(240, 240, 240, 0.4);
 
 /* Reset Styles */
 html {
@@ -85,7 +85,6 @@ div.container {
                     margin: 0 auto;
                 }
             }
-
         }
     }
 
@@ -146,7 +145,7 @@ div.container {
             text-align: center;
 
             &:nth-child(odd) {
-                background: rgba(200, 200, 200, 0.2);
+                background: rgba(200, 200, 200, 0.1);
             }
 
             .product-info {
@@ -159,8 +158,6 @@ div.container {
                 }
             }
         }
-
-
     }
 
     /* Grid Row and Columns */
