@@ -102,7 +102,7 @@ div.container nav.checkout-header {
 div.container nav.checkout-header ul.checkout-header__list {
   display: flex;
   padding: 10px;
-  background: rgba(240, 240, 240, 0.6);
+  background: rgba(240, 240, 240, 0.4);
 }
 div.container nav.checkout-header ul.checkout-header__list li {
   display: block;
@@ -115,7 +115,7 @@ div.container nav.checkout-header ul.checkout-header__list a {
 div.container section.order-details {
   margin: 1%;
   padding: 3%;
-  border-bottom: 2px solid rgba(240, 240, 240, 0.6);
+  border-bottom: 2px solid rgba(240, 240, 240, 0.4);
 }
 div.container div.form-group {
   padding: 1%;
@@ -130,7 +130,7 @@ div.container ul.order-items li.order-item {
   text-align: center;
 }
 div.container ul.order-items li.order-item:nth-child(odd) {
-  background: rgba(200, 200, 200, 0.2);
+  background: rgba(200, 200, 200, 0.1);
 }
 div.container ul.order-items li.order-item .product-info {
   display: flex;
