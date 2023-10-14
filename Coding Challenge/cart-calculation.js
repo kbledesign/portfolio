@@ -1,111 +1,112 @@
-const SKUS = {
-    A: { name: "A", price: 60 },
-    B: { name: "B", price: 70 },
-    C: { name: "C", price: 10 },
-    D: { name: "D", price: 20 }
-};
-
-let shoppingCart = {
-    products: [],
-    quantity: [],
-    price: [],
-    discount: [],
-    subtotal: 0,
-    discountTotal: 0,
-    freeGift: [],
-    totalCost: 0
-};
-
-const cartScenario = {
-    option1: ['A', 'A', 'B', 'C', 'C', 'D'],
-    option2: ['A', 'A', 'A', 'A', 'A', 'B', 'B', 'C', 'D']
-};
-const calculateOrder = () => {
-    const newCart = { ...shoppingCart };
-    const currentCart = cartScenario.option2; // Change this to option2 if needed
-
-    const cartQty = currentCart.reduce((acc, item) => {
-        acc[item] = (acc[item] || 0) + 1;
-        return acc;
-    }, {});
-
-    const cartProdNameQty = Object.entries(cartQty).map(([name, quantity]) => ({
-        name,
-        quantity
-    }));
-
-    cartProdNameQty.forEach(item => {
-        newCart.products.push(item.name);
-        newCart.quantity.push(item.quantity);
-        newCart.price.push(SKUS[item.name].price);
-    });
-
-    const newSubTotal = calculateSubtotal(currentCart);
-    const newDiscountTotal = validateActivePromos(currentCart);
-    const { discountAmount, discount, newFreeGift } = newDiscountTotal;
-    const newTotalCost = calculateTotalCost(newSubTotal, discountAmount);
-
-    newCart.subtotal = newSubTotal;
-    newCart.discount = discount;
-    newCart.discountTotal = discountAmount;
-    newCart.totalCost = newTotalCost;
-    newCart.freeGift = newFreeGift;
-    shoppingCart = { ...shoppingCart, ...newCart }
-
-    showCartItems(shoppingCart);
-
-    const subtotalElem = document.querySelector(".sub-total");
-    const discountTotalElem = document.querySelector(".discount-total");
-    const orderTotalElem = document.querySelector(".order-total");
-
-    subtotalElem.textContent = `$${shoppingCart.subtotal}`;
-    discountTotalElem.textContent = `$${shoppingCart.discountTotal}`;
-    orderTotalElem.textContent = `$${shoppingCart.totalCost}`;
-
-    console.log(shoppingCart);
-};
-
-const calculateSubtotal = currentCart =>
-    currentCart.reduce((acc, sku) => acc + SKUS[sku].price, 0);
-
-const validateActivePromos = currentCart => {
-    let orderPromotions = {
-        discountAmount: 0,
-        discount: [],
-        newFreeGift: []
+window.onload = () => {
+    const SKUS = {
+        A: { name: "A", price: 60 },
+        B: { name: "B", price: 70 },
+        C: { name: "C", price: 10 },
+        D: { name: "D", price: 20 }
     };
 
-    const validatePromoA = currentCart.filter(product => product === "A");
-    const validatePromoB = currentCart.filter(product => product === "B");
+    const shoppingCart = {
+        products: [],
+        quantity: [],
+        price: [],
+        discount: [],
+        subtotal: 0,
+        discountTotal: 0,
+        freeGift: [],
+        totalCost: 0
+    };
 
-    if (validatePromoA.length >= 2) {
-        const promoDiscountAmount = 10;
-        const discountAmount = validatePromoA.length * promoDiscountAmount;
+    const cartScenario = {
+        option1: ['A', 'A', 'B', 'C', 'C', 'D'],
+        option2: ['A', 'A', 'A', 'A', 'A', 'B', 'B', 'C', 'D']
+    };
+    const calculateOrder = () => {
+        const newCart = { ...shoppingCart };
+        const currentCart = cartScenario.option1; // Change this to option2 if needed
 
-        if (!orderPromotions.discount.includes("Buy 2 for $100")) {
-            orderPromotions.discount.push("Buy 2 for $100");
+        const cartQty = currentCart.reduce((acc, item) => {
+            acc[item] = (acc[item] || 0) + 1;
+            return acc;
+        }, {});
+
+        const cartProdNameQty = Object.entries(cartQty).map(([name, quantity]) => ({
+            name,
+            quantity
+        }));
+
+        cartProdNameQty.forEach(item => {
+            newCart.products.push(item.name);
+            newCart.quantity.push(item.quantity);
+            newCart.price.push(SKUS[item.name].price);
+        });
+
+        const newSubTotal = calculateSubtotal(currentCart);
+        const newDiscountTotal = validateActivePromos(currentCart);
+        const { discountAmount, discount, newFreeGift } = newDiscountTotal;
+        const newTotalCost = calculateTotalCost(newSubTotal, discountAmount);
+
+        newCart.subtotal = newSubTotal;
+        newCart.discount = discount;
+        newCart.discountTotal = discountAmount;
+        newCart.totalCost = newTotalCost;
+        newCart.freeGift = newFreeGift;
+        const finalShoppingCart = { ...shoppingCart, ...newCart }
+
+        showCartItems(finalShoppingCart);
+
+        const subtotalElem = document.querySelector(".sub-total");
+        const discountTotalElem = document.querySelector(".discount-total");
+        const orderTotalElem = document.querySelector(".order-total");
+
+        subtotalElem.textContent = `$${shoppingCart.subtotal}`;
+        discountTotalElem.textContent = `$${shoppingCart.discountTotal}`;
+        orderTotalElem.textContent = `$${shoppingCart.totalCost}`;
+
+        console.log(shoppingCart);
+    };
+
+    const calculateSubtotal = currentCart =>
+        currentCart.reduce((acc, sku) => acc + SKUS[sku].price, 0);
+
+    const validateActivePromos = currentCart => {
+        let orderPromotions = {
+            discountAmount: 0,
+            discount: [],
+            newFreeGift: []
+        };
+
+        const validatePromoA = currentCart.filter(product => product === "A");
+        const validatePromoB = currentCart.filter(product => product === "B");
+
+        if (validatePromoA.length >= 2) {
+            const promoDiscountAmount = 10;
+            const discountAmount = validatePromoA.length * promoDiscountAmount;
+
+            if (!orderPromotions.discount.includes("Buy 2 for $100")) {
+                orderPromotions.discount.push("Buy 2 for $100");
+            }
+            orderPromotions.discountAmount = discountAmount;
         }
-        orderPromotions.discountAmount = discountAmount;
-    }
 
-    if (validatePromoB.length >= 2) {
-        orderPromotions.discountAmount += SKUS["B"].price;
-        orderPromotions.newFreeGift.push("B");
+        if (validatePromoB.length >= 2) {
+            orderPromotions.discountAmount += SKUS["B"].price;
+            orderPromotions.newFreeGift.push("B");
 
-        if (!orderPromotions.discount.includes("Buy 2 get 1 Free!")) {
-            orderPromotions.discount.push("Buy 2 get 1 Free!");
+            if (!orderPromotions.discount.includes("Buy 2 get 1 Free!")) {
+                orderPromotions.discount.push("Buy 2 get 1 Free!");
+            }
         }
-    }
-    return orderPromotions;
-};
+        return orderPromotions;
+    };
 
-const calculateTotalCost = (newSubTotal, discountTotal) =>
-    newSubTotal - discountTotal;
+    const calculateTotalCost = (newSubTotal, discountTotal) =>
+        newSubTotal - discountTotal;
 
-const showCartItems = updatedCart => {
-    const { products, price, quantity, discount, freeGift } = updatedCart;
+    const showCartItems = updatedCart => {
+        const { products, price, quantity, discount, freeGift } = updatedCart;
 
-    let cartListItems = products.map((sku, index) => `
+        let cartListItems = products.map((sku, index) => `
     <li class="order-item">
         <div class="product-info product-name-cont">
         <div class="product-name">${sku}</div>
@@ -116,8 +117,8 @@ const showCartItems = updatedCart => {
     </li>
     `);
 
-    if (freeGift.length > 0) {
-        cartListItems.push(`
+        if (freeGift.length > 0) {
+            cartListItems.push(`
         <li class="order-item">
             <div class="product-info product-name-cont">
             <div class="product-name">${freeGift[0]}</div>
@@ -127,14 +128,12 @@ const showCartItems = updatedCart => {
             </div>
         </li>
         `);
-    }
+        }
 
-    const cartListItemsTotal = cartListItems.join("");
+        const cartListItemsTotal = cartListItems.join("");
 
-    const cartListCont = document.querySelector(".order-items");
-    cartListCont.innerHTML = cartListItemsTotal;
-};
-
-window.onload = () => {
+        const cartListCont = document.querySelector(".order-items");
+        cartListCont.innerHTML = cartListItemsTotal;
+    };
     calculateOrder();
 }
