@@ -1,4 +1,4 @@
-window.onload = async () => {
+document.addEventListener("DOMContentLoaded", async () => {
     const loadCartData = async () => {
         try {
             const res = await fetch("cart-data.json");
@@ -15,7 +15,7 @@ window.onload = async () => {
         const { SKUS, shoppingCart, cartScenario } = data;
 
         const newCart = { ...shoppingCart };
-        const currentCart = cartScenario.option2; // Change this to option2 if needed
+        const currentCart = cartScenario.option1; // Change this to option2 if needed
 
         const cartQty = currentCart.reduce((acc, item) => {
             acc[item] = (acc[item] || 0) + 1;
@@ -97,8 +97,6 @@ window.onload = async () => {
     const showCartItems = (updatedCart, SKUS) => {
         const { products, price, quantity, discount, freeGift, subtotal, totalCost, discountTotal } = updatedCart;
 
-        console.log(updatedCart)
-
         let cartListItems = products.map((sku, index) => `
         <li class="order-item">
             <div class="product-info product-name-cont">
@@ -130,4 +128,5 @@ window.onload = async () => {
         cartListCont.innerHTML = cartListItemsTotal;
     };
     await calculateOrder();
-}
+})
+
