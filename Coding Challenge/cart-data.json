@@ -1,0 +1,51 @@
+{
+    "SKUS": {
+        "A": {
+            "name": "A",
+            "price": 60
+        },
+        "B": {
+            "name": "B",
+            "price": 70
+        },
+        "C": {
+            "name": "C",
+            "price": 10
+        },
+        "D": {
+            "name": "D",
+            "price": 20
+        }
+    },
+    "shoppingCart": {
+        "products": [],
+        "quantity": [],
+        "price": [],
+        "discount": [],
+        "subtotal": 0,
+        "discountTotal": 0,
+        "freeGift": [],
+        "totalCost": 0
+    },
+    "cartScenario": {
+        "option1": [
+            "A",
+            "A",
+            "B",
+            "C",
+            "C",
+            "D"
+        ],
+        "option2": [
+            "A",
+            "A",
+            "A",
+            "A",
+            "A",
+            "B",
+            "B",
+            "C",
+            "D"
+        ]
+    }
+}
