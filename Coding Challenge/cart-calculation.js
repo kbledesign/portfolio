@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", async () => {
             throw Error("Error, cart not loading!")
         }
     }
-
     const calculateOrder = async () => {
         const data = await loadCartData();
 
@@ -55,11 +54,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         discountTotalElem.textContent = `$${finalShoppingCart.discountTotal}`;
         orderTotalElem.textContent = `$${finalShoppingCart.totalCost}`;
     };
-
     const calculateSubtotal = (currentCart, SKUS) => {
         return currentCart.reduce((acc, sku) => acc + SKUS[sku].price, 0);
     }
-
     const validateActivePromos = (currentCart, SKUS) => {
         let orderPromotions = {
             discountAmount: 0,
@@ -90,10 +87,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
         return orderPromotions;
     };
-
     const calculateTotalCost = (newSubTotal, discountTotal) =>
         newSubTotal - discountTotal;
-
     const showCartItems = (updatedCart, SKUS) => {
         const { products, price, quantity, discount, freeGift, subtotal, totalCost, discountTotal } = updatedCart;
 
@@ -127,6 +122,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         cartListCont.innerHTML = cartListItemsTotal;
     };
-    await calculateOrder();
-})
 
+    const submitBtn = document.querySelector(".submitBtn");
+
+    submitBtn.addEventListener("click", () => {
+        alert("Thank you, order now processing!")
+    })
+
+    await calculateOrder();
+});
