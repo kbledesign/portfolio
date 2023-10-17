@@ -1,0 +1,5 @@
+Architecture
+    > Authentication: Firebase/email/social
+    > Database: Firebase
+    > CSS - frame work: 
+    > State Management: Redux, Thunker Front End
