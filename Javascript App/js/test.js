@@ -1,5 +1,4 @@
 export default function test() {
-
     console.log("ES6 Features");
 
     {
@@ -56,5 +55,41 @@ export default function test() {
         };
     }
     // -->
+
+    //concise props
+    let a = 2, b = 3;
+    let c = { a, b }
+
+    // concise methods, expressions
+    let o = {
+        a() { },
+        b() { }
+    }
+    // standards for recursion
+    let p = {
+        something: function something() { }
+    }
+    // computed props
+    let r = {
+        [prefix + "foo"]: function () { }
+    }
+    // prototype setting
+    let a1 = {};
+    let a2 = {
+        __proto__: a1
+    }
+
+    // super
+    const a3 = {
+        foo() { }
+    }
+    const a4 = {
+        foo() {
+            super.foo()
+        }
+    }
+    Object.setPrototypeOf(a3, a4);
+
+    //tagged string literals
 
 }
