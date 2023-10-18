@@ -1,23 +1,23 @@
 export default function test() {
-    function step1(callback) {
+    const step1 = (callback) => {
         setTimeout(() => {
             console.log("step1");
             callback();
         }, 1000)
     }
-    function step2(callback) {
+    const step2 = (callback) => {
         setTimeout(() => {
             console.log("step2");
             callback();
         }, 1000)
     }
-    function step3(callback) {
+    const step3 = (callback) => {
         setTimeout(() => {
             console.log("step3");
             callback();
         }, 1000)
     }
-    function callBackHell() {
+    const callBackHell = () => {
         step1(() => {
             step2(() => {
                 step3(() => {
