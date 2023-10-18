@@ -1,4 +1,4 @@
-export default function generators() {
+export default function test() {
     function* gen() {
         let x = 1;
         x++;

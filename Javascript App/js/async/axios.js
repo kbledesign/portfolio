@@ -1,4 +1,4 @@
-export default function test_axios_api() {
+export default function test() {
     const url = "https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js";
     const script = document.createElement("script");
     script.src = url;
