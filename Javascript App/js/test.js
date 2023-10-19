@@ -89,7 +89,16 @@ export default function test() {
         }
     }
     Object.setPrototypeOf(a3, a4);
-
     //tagged string literals
+
+    // Symbols
+    const sym = Symbol("key"); // unique value, hidden props, prevent collisions
+    sym.toString(); // Symbol("...")
+
+    let obj1 = {
+        [sym]: 123
+    }
+    const sym2 = Symbol.for("key") // returns existing or creates new
+    let desc = Symbol.keyFor(sym)
 
 }
