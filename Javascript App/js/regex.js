@@ -15,4 +15,16 @@ export default function regex() {
     // { n } matches exactly n times.
     // { n, m } matches between n and m times.
 
+    const r1 = /^apple/; //start of string
+    const r2 = /$apple/; //end of string
+    const r3 = /\./; // match characters like . and *
+    const r4 = /\./; // match characters like . and *
+
+    let r5 = "str".test(); // checks string
+    let r6 = "str".match(); // array of matches
+    let r7 = "str".search(); // return index or -1
+    let r8 = "str".replace(); // new str with replacement 
+
+    let p9 = new RegExp("apple");
+    let p10 = p9.test("I have an apple.");
 }
