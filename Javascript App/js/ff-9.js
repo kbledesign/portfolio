@@ -215,3 +215,87 @@ functions.reduce(
         }
     }
 )
+
+
+
+// Concept: Filtering unique values from an array
+// Using filter() and indexOf() to filter the first occurrence of each item
+var unique = arr => arr.filter((v, idx) => arr.indexOf(v) == idx);
+
+
+
+// Concept: Flattening a nested array into a flat array
+// Using reduce() to recursively flatten nested arrays and an optional depth limit
+var flatten = (arr, depth = Infinity) => {
+    return arr.reduce((list, v) => {
+        return list.concat(
+            depth > 0 ? (Array.isArray(v) ? flatten(v, depth - 1) : v) : [v]
+        );
+    }, []);
+};
+
+
+
+// Concept: Mapping a list and then flattening the result
+// Using map() to transform a list and reduce() to flatten the result
+var firstNames = [
+    { name: "Jonathan", variations: ["John", "Jon", "Jonny"] },
+    { name: "Stephanie", variations: ["Steph", "Stephy"] },
+    { name: "Frederick", variations: ["Fred", "Freddy"] }
+];
+
+var flatNames = firstNames
+    .map(entry => [entry.name, ...entry.variations])
+    .reduce((list, v) => list.concat(v), []);
+
+
+
+
+
+
+// Concept: Zip combines two lists by alternating values from each input list into sub-lists
+function zip(arr1, arr2) {
+    var zipped = [];
+    arr1 = [...arr1]; // Copy to avoid modifying the original array
+    arr2 = [...arr2]; // Copy to avoid modifying the original array
+
+    while (arr1.length > 0 && arr2.length > 0) {
+        zipped.push([arr1.shift(), arr2.shift()]);
+    }
+
+    return zipped;
+}
+
+// Example usage:
+var list1 = [1, 3, 5, 7, 9];
+var list2 = [2, 4, 6, 8, 10];
+var zippedList = zip(list1, list2);
+console.log(zippedList);
+// Output: [[1, 2], [3, 4], [5, 6], [7, 8], [9, 10]]
+
+
+
+// Concept: Merging two lists interleaves values from each source into a flat list
+function mergeLists(arr1, arr2) {
+    var merged = [];
+    arr1 = [...arr1]; // Copy to avoid modifying the original array
+    arr2 = [...arr2]; // Copy to avoid modifying the original array
+
+    while (arr1.length > 0 || arr2.length > 0) {
+        if (arr1.length > 0) {
+            merged.push(arr1.shift());
+        }
+        if (arr2.length > 0) {
+            merged.push(arr2.shift());
+        }
+    }
+
+    return merged;
+}
+
+// Example usage:
+var list1 = [1, 3, 5, 7, 9];
+var list2 = [2, 4, 6, 8, 10];
+var mergedList = mergeLists(list1, list2);
+console.log(mergedList);
+// Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
