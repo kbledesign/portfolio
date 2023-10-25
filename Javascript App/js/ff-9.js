@@ -191,9 +191,14 @@ console.log(product); // Output: 120
 // composing functions with reduce, left to right
 
 // Concept: Function Composition with Reduce
+
+
+
+
 function compose(...functions) {
     return functions.reduce((f, g) => (...args) => f(g(...args)));
 }
+
 
 const addOne = (x) => x + 1;
 const double = (x) => x * 2;
@@ -202,7 +207,14 @@ const square = (x) => x * x;
 const composedFunction = compose(addOne, double, square);
 
 const result = composedFunction(2);
+
 console.log(result); // Output: 10 (2 -> square -> double -> addOne)
+
+
+
+
+
+
 
 
 
@@ -293,9 +305,127 @@ function mergeLists(arr1, arr2) {
     return merged;
 }
 
+
+
+
 // Example usage:
 var list1 = [1, 3, 5, 7, 9];
 var list2 = [2, 4, 6, 8, 10];
 var mergedList = mergeLists(list1, list2);
 console.log(mergedList);
 // Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+
+
+
+
+// partial aware this and args
+var partialThis = (fn, ...presetArgs) => {
+    // Using a regular function to maintain the `this` binding
+    return function partiallyApplied(...laterArgs) {
+        return fn.apply(this, [...presetArgs, ...laterArgs]);
+    };
+};
+
+var composeChainedMethods = (...fns) => result =>
+    fns.reduceRight((result, fn) => fn.call(result), result);
+
+var result = composeChainedMethods(
+    partialThis(Array.prototype.reduce, sum, 0),
+    partialThis(Array.prototype.map, double),
+    partialThis(Array.prototype.filter, isOdd)
+)([1, 2, 3, 4, 5]);
+
+console.log(result); // 18
+
+
+
+
+
+
+
+
+
+// Adapting methods to standalones 
+
+// Helper function to flatten arrays
+function flatten(arr) {
+    return arr.reduce((flatList, item) => {
+        if (Array.isArray(item)) {
+            // If an item is itself an array, flatten it and add to the result.
+            return flatList.concat(flatten(item));
+        } else {
+            // If it's not an array, just add it to the result.
+            return flatList.concat(item);
+        }
+    }, []);
+}
+
+// Now, use the helper function to flatten the nested list
+const flatList = flatten(nestedList);
+
+console.log(flatList); // Output: [1, 2, 3, 4, 5, 6]
+
+
+
+
+
+
+// looking for lists
+
+// Utility function to guard function execution
+var guard = fn => arg => (arg != null ? fn(arg) : arg);
+
+// Utility function to access object properties
+var prop = (key, obj) => obj[key];
+
+// Utility function to partially apply a function
+var partial = (fn, ...args) => fn.bind(null, ...args);
+
+// Simulated data and functions
+function getCurrentSession() {
+    // Simulated data for the current session
+    return { sessId: "session123" };
+}
+
+function lookupUser(session) {
+    // Simulated user lookup
+    return { uId: "user456" };
+}
+
+function lookupOrders(user) {
+    // Simulated order lookup
+    return ["order1", "order2", "order3"];
+}
+
+function processOrders(orders) {
+    // Simulated order processing
+    console.log("Processed orders:", orders);
+}
+
+// List of functions to be composed
+const functionsToCompose = [
+    "sessId", "uId"
+].map(propName => partial(prop, propName))
+    .reduce((merged, v, idx) => (merged.splice(idx * 2, 0, v), merged), [lookupUser])
+    .concat(lookupOrders, processOrders)
+    .map(guard);
+
+// Compose the functions
+const result = functionsToCompose.reduce(
+    (result, nextFn) => nextFn(result),
+    getCurrentSession()
+);
+
+
+
+
+
+
+
+
+
+
+
+// fusion
+
