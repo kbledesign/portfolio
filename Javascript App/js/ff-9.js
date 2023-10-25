@@ -429,3 +429,29 @@ const result = functionsToCompose.reduce(
 
 // fusion
 
+// compose approach
+const fusedWords = words.map(
+    compose(elide, upper, removeInvalidChars)
+);
+
+console.log(fusedWords);
+
+
+// fusion for filter predicates
+const fusedNumbers = numbers.filter(
+    compose(isPositive, isEven)
+);
+
+console.log(fusedNumbers);
+
+
+// reduce approach
+const combinedOperations = numbers.reduce(
+    (acc, num) => ({
+        sumOfEvens: accumulateIfEven(acc.sumOfEvens, num),
+        avgOfPositives: averageIfPositive(acc.avgOfPositives, num),
+    }),
+    { sumOfEvens: 0, avgOfPositives: 0 }
+);
+
+console.log(combinedOperations.sumOfEvens, combinedOperations.avgOfPositives);
