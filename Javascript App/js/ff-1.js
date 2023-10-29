@@ -5,6 +5,9 @@ function add(x, y) {
 
 const result = add(3, 5);
 console.log(result); // 8
+///////
+
+
 
 // Defaulting Parameters
 function greet(name = 'Guest') {
@@ -13,6 +16,9 @@ function greet(name = 'Guest') {
 
 greet(); // Hello, Guest!
 greet('Alice'); // Hello, Alice!
+///////
+
+
 
 // Counting Inputs
 function sum(...numbers) {
@@ -21,6 +27,9 @@ function sum(...numbers) {
 
 const total = sum(1, 2, 3, 4, 5);
 console.log(total); // 15
+///////
+
+
 
 // Parameter Destructuring
 function getFullName({ firstName, lastName }) {
@@ -34,6 +43,8 @@ const person = {
 
 const fullName = getFullName(person);
 console.log(fullName); // John Doe
+///////
+
 
 // Named Arguments
 function displayInfo({ name, age, city }) {
@@ -41,12 +52,17 @@ function displayInfo({ name, age, city }) {
 }
 
 const info = {
-    age: 30,
     name: 'Alice',
-    city: 'New York',
+    age: 30,
+    city: 'New York'
 };
 
 displayInfo(info); // Name: Alice, Age: 30, City: New York
+///////
+
+
+
+
 
 // Early Returns
 function calculateValue(x) {
@@ -65,7 +81,6 @@ console.log(calculateValue(8));  // 8
 console.log(calculateValue(12)); // 13
 
 
-
 // Implicit Output
 var y;
 
@@ -77,14 +92,16 @@ f(2);
 
 console.log(y); // Output: 11
 
+
 // Explicit Output
 function f(x) {
     return (2 * Math.pow(x, 2)) + 3;
 }
 
 var y = f(2);
-
 console.log(y); // Output: 11
+
+
 
 
 // Side Effects and Pure Functions:
@@ -102,6 +119,7 @@ var nums = [1, 3, 9, 27, , 84];
 
 console.log(sum(nums)); // Output: 124
 console.log(nums); // Output: [1, 3, 9, 27, 0, 84]
+
 
 
 
