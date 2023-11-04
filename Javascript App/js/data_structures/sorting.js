@@ -54,7 +54,7 @@ function quickSort(arr) {
     if (arr.length <= 1) {
       return arr; // Base case: an array with 0 or 1 elements is already sorted.
     }
-  
+    // 5,4,3,2,1
     const pivot = arr[arr.length - 1];
     const left = [];
     const right = [];
@@ -69,4 +69,5 @@ function quickSort(arr) {
   
     return [...quickSort(left), pivot, ...quickSort(right)];
   }
+  
   
