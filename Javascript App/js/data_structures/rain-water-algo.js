@@ -24,14 +24,16 @@ function naiveSolution(heights) {
 
 
 
-// [4, 3, 0, 1, 2]
+// [4, 2, 1, 3, 0, 1, 2]
 
 function efficientSolution(heights) {
     let totalWater = 0;
+    
     let leftPointer = 0;
     let rightPointer = heights.length - 1;
+
     let leftBound = 0;
-    let rightBound = 0;
+    let rightBound = 0; // 3
   
     while (leftPointer < rightPointer) {
       if (heights[leftPointer] < heights[rightPointer]) {
