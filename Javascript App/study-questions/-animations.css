@@ -1,0 +1,155 @@
+/* CSS Transitions */
+/* Smoothly change the color of a button on hover */
+.button {
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #3498db;
+}
+
+/* Keyframes and Animations */
+/* Create a pulse animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulsing {
+    animation: pulse 2s infinite;
+}
+
+/* Animation Properties */
+/* Animate an element's width */
+.expanding {
+    animation-name: expandWidth;
+    animation-duration: 2s;
+}
+
+@keyframes expandWidth {
+    from {
+        width: 100px;
+    }
+
+    to {
+        width: 300px;
+    }
+}
+
+/* Easing Functions */
+/* Use ease-in-out easing function */
+.easing-example {
+    transition: transform 1s ease-in-out;
+}
+
+/* Transforms */
+/* Rotate a card */
+.card {
+    transform: rotate(30deg);
+}
+
+/* Transition and Animation Events */
+/* Trigger animations with JavaScript */
+/* Listen for animation end event */
+const element=document.querySelector(".animated");
+
+element.addEventListener("animationend", ()=> {
+        console.log("Animation completed");
+    });
+
+/* CSS Animation Libraries */
+/* Use Animate.css classes */
+/* Animate.css library is applied to elements in HTML */
+
+/* Sprite Animations */
+/* Create a sprite animation */
+.sprite {
+    background-image: url('sprite-sheet.png');
+    animation: play 1s steps(10) infinite;
+}
+
+@keyframes play {
+    to {
+        background-position: -300px;
+    }
+}
+
+/* Parallax Scrolling */
+/* Parallax scrolling effect */
+.parallax {
+    background-attachment: fixed;
+}
+
+/* CSS Transitions vs. Animations */
+/* Transition for simple hover effect */
+.transition-example {
+    transition: transform 0.3s ease;
+}
+
+.transition-example:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Animations */
+/* Responsive animation with media queries */
+@media (max-width: 768px) {
+    .responsive-animation {
+        animation: slideDown 1s;
+    }
+}
+
+/* Hardware Acceleration */
+/* Utilize GPU acceleration for smoother animations */
+.accelerated-animation {
+    transform: translateZ(0);
+}
+
+/* Accessibility and Animations */
+/* Provide alternative content for animations */
+.accessible-animation {
+    content: "Loading... Please wait.";
+    animation: loading 1s infinite;
+}
+
+/* Performance Optimization */
+/* Use transform for performance optimization */
+.optimized-animation {
+    transform: translateX(100px);
+}
+
+/* Scroll Animations */
+/* Animate element on scroll */
+/* Use JavaScript to add classes on scroll */
+
+/* SVG Animations */
+/* SVG animation example */
+/* Inline SVG or link to an SVG file */
+
+/* Canvas Animations */
+/* Canvas animation example */
+/* Create a canvas element and use JavaScript for animations */
+
+/* 3D Animations */
+/* 3D CSS animation */
+/* Utilize properties like rotateX, rotateY, and perspective */
+
+/* Animating Pseudo-Elements */
+/* Apply animations to pseudo-elements */
+/* Style pseudo-elements using ::before and ::after */
+
+/* Cross-Browser Compatibility */
+/* Ensure compatibility with vendor prefixes */
+/* Add necessary prefixes for CSS properties */
+
+/* Additional CSS Animation Concepts and Code Examples */
+
+/* Your custom animations and concepts here */

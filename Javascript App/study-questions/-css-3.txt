@@ -102,6 +102,14 @@ Certainly! Here's a list of some of the most common CSS/CSS3 properties along wi
 
 These are some of the most common CSS and CSS3 properties used for styling web content and layouts. Each property plays a crucial role in controlling the appearance and behavior of elements on a web page.
 
+
+
+
+
+
+
+  
+  
 1. animation-name
 
 Specifies the name of the animation defined using @keyframes.

@@ -72,11 +72,12 @@ CSS Units:
 
 39. Pixels (px): Absolute unit for screen display.
 40. Percent (%): Relative unit based on the parent element.
-41. em and rem: Relative units based on font size.
+41. em and rem: Relative units based on font size. (root vs parent)
 42. vh and vw: Relative units based on viewport height and width.
 43. Ch and ex: Units based on character and x-height of the font.
 
 Transforms and Transitions:
+
 
 44. CSS Transforms: Modify element appearances using transformations.
 45. Transition Property: Smoothly animate property changes.

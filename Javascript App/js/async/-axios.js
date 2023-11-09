@@ -4,10 +4,10 @@ export default function test() {
     script.src = url;
     document.body.appendChild(script)
 
-    const todos = "https://jsonplaceholder.typicode.com/todos/100";
+    const endpoint = "https://jsonplaceholder.typicode.com/todos/100";
 
     script.onload = function () {
-        axios.get(todos)
+        axios.get(endpoint)
             .then((response) => {
                 console.log("Axios Todos Response", response);
             })

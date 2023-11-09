@@ -1,0 +1,69 @@
+react
+    components
+    jsx
+    props
+    state
+    lifecycle methods
+    hooks
+    conditional rendering
+    list/keys
+    event handling
+    forms
+    component composition
+    context api
+    routing
+    redux state management
+    higher order components
+    error boundaries
+    context / theming
+    hooks / custom hooks
+    server side rendering
+    testing
+
+Vue js
+    SF components
+    vue instance
+    data binding 
+    directives
+    v bind
+    v-model
+    v-for
+    v-if, v-else
+    computed properties
+    watchers
+    methods
+    lifecycle hooks
+    components communication
+    routing vue router
+    state management vuex pinnia
+    templates
+    render functions
+    Filters
+    mixins
+    async components 
+
+OOP - object prototype, classes, inheritance, encapsulation
+
+web services
+    api, data retrieval, http requests, restful apis, graph ql, 3rd party services, authentication and authorization, async operations, cross origin requests, web sockets, caching/optimization, error handling, security
+
+SFCC
+    storefronts
+    controllers pipeline
+    content slots / components
+    responsive design
+    data models
+        info, inventory, pricing
+    javascript
+    css / styling
+    checkout follow
+    search / navigation
+    localization
+    performance optimization
+    accessibility
+    testing / debugging 
+    version control
+    quality assurance
+    security
+    user experience    
+

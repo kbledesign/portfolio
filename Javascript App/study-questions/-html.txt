@@ -1,5 +1,7 @@
 Certainly, here's a list of 50 challenging HTML interview questions and their answers:
 
+header, nav, ul li, h1, main, section, h2, pm  article, footer
+
 1. What is the purpose of the `<!DOCTYPE>` declaration in HTML?
    - It specifies the document type and version of HTML being used.
 
