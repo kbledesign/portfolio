@@ -76,6 +76,7 @@ Certainly! Here are 100 tricky HTML5 interview questions and answers. This is a 
     - `pushState` allows you to change the URL and manage the browser's history, enabling client-side routing in single-page applications.
 
 26. How can you create responsive images that adapt to both screen size and orientation changes on mobile devices?
+    
     - Use the `srcset` and `sizes` attributes along with media queries to adjust images for various orientations and screen sizes.
 
 27. What is the HTML5 picture element, and how does it help with responsive images?

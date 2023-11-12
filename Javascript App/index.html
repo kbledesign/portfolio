@@ -2,75 +2,69 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript Web App</title>
-    <style>
-        body {
-            padding: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript Web App</title>
+  <style>
+    body {
+      padding: 10px;
+    }
+  </style>
 </head>
 
 <body>
-    <h1>The Ultimate Javascript App</h1>
-    <p>Giant place holder app to explore the features of Javascript</p>
+  <h1>The Ultimate Javascript App</h1>
+  <p>Giant place holder app to explore the features of Javascript</p>
 
-    <div>
-        <h2>Input</h2>
-        <form action="" class="input">
-            <input type="text" id="input_field" name="input_field">
-            <button type="submit">Submit</button>
-        </form>
-        <h2>
-            Output
-        </h2>
-        <div class="output"></div>
-    </div>
+  <div>
+    <h2>Input</h2>
+    <form action="" class="input">
+      <input type="text" id="input_field" name="input_field">
+      <button type="submit">Submit</button>
+    </form>
+    <h2>
+      Output
+    </h2>
+    <div class="output"></div>
+  </div>
 
-    <div id="root"></div>
-    <!-- <script type="module" src="./sandbox.js"></script> -->
-    <script>
-function naiveSolution(heights) {
-    let totalWater = 0;
+  <div id="root"></div>
+  <!-- <script type="module" src="./sandbox.js"></script> -->
+  <script>
+    const dynamicKnapsack = function (weightCap, weights, values) {
+      const numItems = weights.length;
+      const matrix = new Array(numItems + 1);
 
-    for (let i = 1; i < heights.length - 1; i++) {
-      let leftBound = 0;
-      let rightBound = 0;
-      // We only want to look at the elements to the left of i, which are the elements at the lower indices
-      
-      for (let j = 0; j <= i; j++) { 
-        leftBound = Math.max(leftBound, heights[j]);
-        console.log("set: " + i, leftBound, heights[j]);
-        console.log("left bound:",leftBound);
+      for (let index = 0; index <= numItems; index++) {
+        matrix[index] = new Array(weightCap + 1);
+
+        for (let weight = 0; weight <= weightCap; weight++) {
+          // Base case: if no items or no weight, set the element to 0
+          if (index === 0 || weight === 0) {
+            matrix[index][weight] = 0;
+          } else if (weights[index - 1] <= weight) {
+            // If the weight of the current item can be included
+            const includeItem = values[index - 1] + matrix[index - 1][weight - weights[index - 1]];
+            const excludeItem = matrix[index - 1][weight];
+            // Set the element to the maximum value of including or excluding the item
+            matrix[index][weight] = Math.max(includeItem, excludeItem);
+          } else {
+            // If the weight of the current item exceeds the available weight
+            matrix[index][weight] = matrix[index - 1][weight];
+          }
+        }
       }
+      console.log(matrix)
+      // Return the element at the bottom right of the matrix
+      return matrix[numItems][weightCap];
+    };
 
-
-      // Likewise, we only want the elements to the right of i, which are the elements at the higher indices
-      for (let j = i; j < heights.length; j++) {
-        rightBound = Math.max(rightBound, heights[j]);
-        console.log("set: " + i, rightBound, heights[j]);
-        console.log("right bound:", rightBound);
-      }
-
-
-      console.log(">>> totalwater", totalWater)
-      console.log("index: " + i, ": " + leftBound, rightBound)
-      
-      totalWater += Math.min(leftBound, rightBound) - heights[i];
-      
-      console.log(">>> totalwater", totalWater)
-
-
-    }
-    return totalWater;
-  }
-
-
-
-  console.log("Toal", naiveSolution([4, 2, 1, 3, 0, 1, 2]));
-
-    </script>
+    // Test the function
+    const weightCap = 50;
+    const weights = [31, 10, 20, 19, 4, 3, 6];
+    const values = [70, 20, 39, 37, 7, 5, 10];
+    console.log(dynamicKnapsack(weightCap, weights, values));
+  </script>
 </body>
 
 </html>
