@@ -31,39 +31,60 @@
   <div id="root"></div>
   <!-- <script type="module" src="./sandbox.js"></script> -->
   <script>
+    console.log(">>>>>");
+
     const dynamicKnapsack = function (weightCap, weights, values) {
-      const numItems = weights.length;
-      const matrix = new Array(numItems + 1);
+      // Get the number of items
+      const n = weights.length;
 
-      for (let index = 0; index <= numItems; index++) {
-        matrix[index] = new Array(weightCap + 1);
+      // Create a memoization table with dimensions (n + 1) x (weightCap + 1)
+      const memo = Array.from({ length: n + 1 }, () => Array(weightCap + 1).fill(-1));
 
-        for (let weight = 0; weight <= weightCap; weight++) {
-          // Base case: if no items or no weight, set the element to 0
-          if (index === 0 || weight === 0) {
-            matrix[index][weight] = 0;
-          } else if (weights[index - 1] <= weight) {
-            // If the weight of the current item can be included
-            const includeItem = values[index - 1] + matrix[index - 1][weight - weights[index - 1]];
-            const excludeItem = matrix[index - 1][weight];
-            // Set the element to the maximum value of including or excluding the item
-            matrix[index][weight] = Math.max(includeItem, excludeItem);
-          } else {
-            // If the weight of the current item exceeds the available weight
-            matrix[index][weight] = matrix[index - 1][weight];
-          }
+      // Define a helper function for recursive calls with memoization
+      function knapsackHelper(weightCap, weights, values, i) {
+        // Base case: If there are no items or the knapsack cannot hold any more weight, return 0.
+        if (i === 0 || weightCap === 0) {
+          return 0;
         }
+
+        // If the result for the current combination is already memoized, return it
+        if (memo[i][weightCap] !== -1) {
+          return memo[i][weightCap];
+        }
+
+        // If the weight of the current item is greater than the remaining capacity of the knapsack, skip this item and move to the next.
+        if (weights[i - 1] > weightCap) {
+          memo[i][weightCap] = knapsackHelper(weightCap, weights, values, i - 1);
+        } else {
+
+          console.log("memo", memo);
+          console.log("memo i>>", i);
+          console.log("memo weightcap>>", weightCap);
+          console.log("memo i", memo[i]);
+          console.log("memo weightcap", memo[weightCap]);
+
+          // Calculate the value if the current item is included and if it is excluded, then return the maximum of these two values.
+          const includeItem = values[i - 1] + knapsackHelper(weightCap - weights[i - 1], weights, values, i - 1);
+          const excludeItem = knapsackHelper(weightCap, weights, values, i - 1);
+          memo[i][weightCap] = Math.max(includeItem, excludeItem);
+        }
+
+        // Return the calculated result
+        return memo[i][weightCap];
       }
-      console.log(matrix)
-      // Return the element at the bottom right of the matrix
-      return matrix[numItems][weightCap];
+
+      // Call the helper function with the initial parameters
+      return knapsackHelper(weightCap, weights, values, n);
     };
 
-    // Test the function
-    const weightCap = 50;
-    const weights = [31, 10, 20, 19, 4, 3, 6];
-    const values = [70, 20, 39, 37, 7, 5, 10];
+    // Given inputs
+    let weightCap = 5;
+    let weights = [1, 3, 5];
+    let values = [250, 300, 500];
+
     console.log(dynamicKnapsack(weightCap, weights, values));
+
+    console.log("-------")
   </script>
 </body>
 
