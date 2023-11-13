@@ -36,26 +36,28 @@ console.log(fibonacci(200));
 
 
 
-const recursiveKnapsack = function (weightCap, weights, values, i) {
-    // Base case: If the knapsack cannot hold any more weight (weightCap is 0) or there are no more items to consider (i is 0), return 0.
-    if (weightCap === 0 || i === 0) {
-        return 0;
-    } else if (weights[i - 1] > weightCap) {
-        // If the weight of the current item is greater than the remaining capacity of the knapsack, skip this item and move to the next.
-        return recursiveKnapsack(weightCap, weights, values, i - 1);
-    } else {
-        // Calculate the value if the current item is included and if it is excluded, then return the maximum of these two values.
-        const includeItem = values[i - 1] + recursiveKnapsack(weightCap - weights[i - 1], weights, values, i - 1);
-        const excludeItem = recursiveKnapsack(weightCap, weights, values, i - 1);
-        return Math.max(includeItem, excludeItem);
-    }
-};
+{
+    const recursiveKnapsack = function (weightCap, weights, values, i) {
+        // Base case: If the knapsack cannot hold any more weight (weightCap is 0) or there are no more items to consider (i is 0), return 0.
+        if (weightCap === 0 || i === 0) {
+            return 0;
+        } else if (weights[i - 1] > weightCap) {
+            // If the weight of the current item is greater than the remaining capacity of the knapsack, skip this item and move to the next.
+            return recursiveKnapsack(weightCap, weights, values, i - 1);
+        } else {
+            // Calculate the value if the current item is included and if it is excluded, then return the maximum of these two values.
+            const includeItem = values[i - 1] + recursiveKnapsack(weightCap - weights[i - 1], weights, values, i - 1);
+            const excludeItem = recursiveKnapsack(weightCap, weights, values, i - 1);
+            return Math.max(includeItem, excludeItem);
+        }
+    };
 
-let weightCap = 5;
-let weights = [1, 3, 5];
-let values = [250, 300, 500];
-console.log(recursiveKnapsack(weightCap, weights, values, values.length));
+    let weightCap = 5;
+    let weights = [1, 3, 5];
+    let values = [250, 300, 500];
+    console.log(recursiveKnapsack(weightCap, weights, values, values.length));
 
+}
 // 500
 // 300 250
 
