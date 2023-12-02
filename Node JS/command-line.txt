@@ -1,0 +1,56 @@
+Certainly! Here's a list of common command line terminal commands for macOS:
+
+1. Navigation:
+   - `cd`: Change directory.
+   - `ls`: List contents of a directory.
+   - `pwd`: Print working directory.
+
+2. File Operations:
+   - `cp`: Copy files/directories.
+   - `mv`: Move/rename files or directories.
+   - `rm`: Remove/delete files.
+
+3. Directory Operations:
+   - `mkdir`: Create a new directory.
+   - `rmdir`: Remove an empty directory.
+
+4. Text Manipulation:
+   - `cat`: Display file content.
+   - `grep`: Search for a specific pattern in files.
+
+5. System Information:
+   - `top`: Display system processes.
+   - `df`: Show disk space usage.
+
+6. File Editing:
+   - `nano`: Simple text editor.
+   - `vim` or `vi`: Powerful text editor.
+
+7. User Management:
+   - `whoami`: Display the current username.
+   - `sudo`: Execute a command with superuser privileges.
+
+8. Network Commands:
+   - `ping`: Check network connectivity.
+   - `ifconfig` or `ipconfig`: Display network configuration.
+
+9. File Permissions:
+   - `chmod`: Change file permissions.
+   - `chown`: Change file owner.
+
+10. Compression and Archiving:
+    - `tar`: Create and extract tar archives.
+    - `zip` and `unzip`: Compress and decompress files.
+
+11. Process Management:
+    - `ps`: Display information about processes.
+    - `kill`: Terminate processes.
+
+12. Environment Variables:
+    - `export`: Set environment variables.
+    - `echo $VAR`: Display the value of an environment variable.
+
+13. Package Management (Homebrew):
+    - `brew install`: Install packages.
+
+Remember that these commands are just a starting point, and there are many more advanced commands and options available. Regular practice and exploration will enhance your command line skills.

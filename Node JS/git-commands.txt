@@ -1,0 +1,44 @@
+# Initialize a Repository
+git init
+
+# Clone a Repository
+git clone <repository_url>
+
+# Add Changes to Staging Area
+git add <file(s)>
+
+# Commit Changes
+git commit -m "Commit message"
+
+# Check Repository Status
+git status
+
+# View Commit History
+git log
+
+# Create a New Branch
+git branch <branch_name>
+
+# Switch to a Branch
+git checkout <branch_name>
+
+# Merge Branches
+git merge <branch_name>
+
+# Pull Changes from a Remote Repository
+git pull origin <branch_name>
+
+# Push Changes to a Remote Repository
+git push origin <branch_name>
+
+# Create and Switch to a New Branch
+git checkout -b <new_branch_name>
+
+# Discard Changes in Working Directory
+git checkout -- <file(s)>
+
+# Undo the Last Commit
+git reset HEAD^
+
+# Fetch Changes from a Remote Repository
+git fetch origin
