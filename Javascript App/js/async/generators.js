@@ -6,7 +6,6 @@ export default function test() {
         yield;
         x++;
         console.log("x:", x);
-
     }
     const it = gen();
     it.next();
@@ -29,6 +28,7 @@ export default function test() {
 
     const isit = iterationMessage(6);
     const res1 = isit.next(5); // starts generator
+
     console.log("yield message", res1);
     const res2 = isit.next(5);
     console.log("iteration response:", res2);

@@ -1,0 +1,16 @@
+{
+  "name": "mocha_chai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "capitalize.js",
+  "devDependencies": {
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC"
+}
