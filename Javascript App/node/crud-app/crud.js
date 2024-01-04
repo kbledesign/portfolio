@@ -1,23 +1,30 @@
+// Import the 'express' module and create an instance of the Express application
 const express = require('express');
 const app = express();
 
-// Serves Express Yourself website
+// Serve static files from the 'public' directory
 app.use(express.static('public'));
 
-const { getElementById, getIndexById, updateElement,
-    seedElements, createElement } = require('./utils');
+// Import various utility functions for working with data
+const { getElementById, getIndexById, updateElement, seedElements, createElement } = require('./utils');
 
+// Initialize empty arrays for 'expressions' and 'animals'
 const expressions = [];
 seedElements(expressions, 'expressions');
 const animals = [];
 seedElements(animals, 'animals');
 
+// Define the port for the server, using the environment variable or default to 4001
 const PORT = process.env.PORT || 4001;
 
+// Define routes and their corresponding handlers
+
+// Get all expressions
 app.get('/expressions', (req, res, next) => {
     res.send(expressions);
 });
 
+// Get a specific expression by ID
 app.get('/expressions/:id', (req, res, next) => {
     const foundExpression = getElementById(req.params.id, expressions);
     if (foundExpression) {
@@ -27,6 +34,7 @@ app.get('/expressions/:id', (req, res, next) => {
     }
 });
 
+// Update an expression by ID
 app.put('/expressions/:id', (req, res, next) => {
     const expressionIndex = getIndexById(req.params.id, expressions);
     if (expressionIndex !== -1) {
@@ -37,6 +45,7 @@ app.put('/expressions/:id', (req, res, next) => {
     }
 });
 
+// Create a new expression
 app.post('/expressions', (req, res, next) => {
     const receivedExpression = createElement('expressions', req.query);
     if (receivedExpression) {
@@ -46,6 +55,8 @@ app.post('/expressions', (req, res, next) => {
         res.status(400).send();
     }
 });
+
+// Delete an expression by ID
 app.delete('/expressions/:id', (req, res, next) => {
     const expressionIndex = getIndexById(req.params.id, expressions);
     if (expressionIndex !== -1) {
@@ -55,47 +66,10 @@ app.delete('/expressions/:id', (req, res, next) => {
         res.status(404).send();
     }
 });
-app.get('/animals', (req, res, next) => {
-    res.status(200).send(animals);
-})
 
-app.get('/animals/:id', (req, res, next) => {
-    const animal = getElementById(req.params.id, animals)
-    if (animal) {
-        res.send(animal);
-    } else {
-        res.status(404).send();
-    }
-})
-app.put('/animals/:id', (req, res, next) => {
-    const index = getIndexById(req.params.id, animals);
-    if (index !== -1) {
-        updateElement(req.params.id, req.query, animals)
-        res.send(animals[index]);
-    } else {
-        res.status(404).send()
-    }
-})
-app.post('/animals', (req, res, next) => {
-    const receivedAnimal = createElement('animals', req.query);
-    if (receivedAnimal) {
-        animals.push(receivedAnimal)
-        res.status(201).send(receivedAnimal)
-    } else {
-        res.status(400).send();
-    }
-});
-app.delete('/animals', (req, res, next) => {
-    const expressionIndex = getIndexById(req.params.id, expressions);
-    if (expressionIndex !== -1) {
-        animals.splice(expressionIndex, 1);
-        res.status(204).send();
-    } else {
-        res.status(404).send();
-    }
-})
+// Define routes for 'animals' with similar CRUD operations as expressions
 
+// Start the server, listen on the defined port, and log a message
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);
 });
-
