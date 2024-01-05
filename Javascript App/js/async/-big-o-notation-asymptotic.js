@@ -1,5 +1,4 @@
-/* 
-Common Runtimes:
+/* Common Run times:
 
 Θ(1): Constant runtime. Programs with this runtime always perform the same operation regardless of input. Example: A program that prints "hello, world."
 
@@ -16,17 +15,16 @@ Common Runtimes:
 Θ(N!): Factorial runtime. Occurs when generating all possible permutations, like ordering the letters "abcd."
 */
 
-
 // Constant runtime Θ(1)
+// This function always prints "Hello, world" in constant time.
 function printHelloWorld() {
-  // This function always prints "Hello, world" in constant time.
   console.log("Hello, world");
 }
 
 // Logarithmic runtime Θ(log N)
+// Binary search algorithm with logarithmic time complexity.
+// It efficiently finds the target element in a sorted array.
 function binarySearch(arr, target) {
-  // Binary search algorithm with logarithmic time complexity.
-  // It efficiently finds the target element in a sorted array.
   let low = 0;
   let high = arr.length - 1;
 

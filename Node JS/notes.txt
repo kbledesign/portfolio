@@ -1,5 +1,23 @@
 
-
 nodemon - file changer
-
 consolidate.js - wrapper for templating view engines
+
+Security
+
+    - jsHint
+    - halting error callbacks 
+    - parsing of query strings
+    - using https 
+        - force ssl, keep them on there
+        - HSTS forces users to stay on https for a period of time
+    - preventing cross scripting attacks XSS
+        - escaping user input
+        - http headers with helmet xssFilter
+        - contentSecurityPolicy
+            html5Rocks
+    - CSRF cross-site request forgery prevention
+    - keeping your dependencies safe
+    - handling server crashes
+
+
+    

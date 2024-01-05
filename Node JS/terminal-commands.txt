@@ -1,0 +1,67 @@
+Node.js Commands:
+
+node: Launch the Node.js runtime environment.
+node <filename.js>: Execute a JavaScript file using Node.js.
+npm -v or npm --version: Check the installed npm version.
+node -v or node --version: Check the installed Node.js version.
+npm init: Initialize a new Node.js project and create a package.json file.
+npm install <package-name>: Install a Node.js package locally.
+npm install -g <package-name>: Install a Node.js package globally.
+npm install: Install all dependencies listed in the package.json file.
+npm start: Run the script specified as "start" in package.json.
+npm test: Run tests defined in the project.
+npm run <script-name>: Run a custom npm script defined in package.json.
+Package Managers:
+12. yarn -v or yarn --version: Check the installed Yarn version.
+
+yarn init: Initialize a new Yarn project and create a package.json file.
+yarn add <package-name>: Install a package using Yarn.
+yarn global add <package-name>: Install a package globally using Yarn.
+yarn install: Install all dependencies listed in the package.json file.
+yarn start: Run the script specified as "start" in package.json.
+yarn test: Run tests defined in the project.
+yarn run <script-name>: Run a custom Yarn script defined in package.json.
+npx Commands:
+20. npx <package-name>: Execute a package directly from the npm registry without installing it globally.
+
+npx create-react-app my-app: Create a new React app using Create React App.
+Vite Commands:
+22. npm install -g create-vite: Install Create Vite globally.
+
+create-vite <app-name>: Create a new Vite-powered project.
+Miscellaneous Commands:
+24. git init: Initialize a new Git repository in the current directory.
+
+git clone <repository-url>: Clone a Git repository from a remote URL.
+git add <file(s)>: Stage changes for commit in Git.
+git commit -m "Commit message": Commit staged changes in Git.
+git push: Push committed changes to a remote Git repository.
+git pull: Pull changes from a remote Git repository.
+git status: Check the status of your Git working directory.
+ls or dir: List files and directories in the current directory.
+cd <directory-name>: Change the current directory.
+pwd or echo %cd% (Windows): Print the current working directory.
+clear or cls (Windows): Clear the terminal/console screen.
+
+
+npm install <package-name> --save-dev or npm install -D <package-name>: Install a package as a development dependency. These packages are typically used for development, testing, and building purposes and are listed in the devDependencies section of your package.json file.
+
+npm install -g <package-name>: Install a package globally. These packages are available system-wide and can be used in multiple projects.
+
+npx Commands:
+
+npx create-react-app <app-name>: Create a new React application using Create React App without the need to install it globally. It fetches the latest version of Create React App from the npm registry and sets up a new project.
+
+npx webpack --config webpack.config.js: Run Webpack with a specific configuration file (webpack.config.js) using npx. This is useful for customizing Webpack builds for your project.
+
+npx eslint --init: Initialize ESLint configuration for your project. ESLint is a popular tool for static code analysis and formatting.
+
+npx jest: Run the Jest test runner. Jest is commonly used for testing JavaScript applications, especially in React projects.
+
+npx serve: Serve the current directory over HTTP. Useful for quickly testing web applications locally.
+
+npx http-server: Start a simple HTTP server to serve static files from the current directory. Handy for hosting static websites during development.
+
+npx create-vue-app <app-name>: Create a new Vue.js application using the Vue CLI without the need to install it globally.
+
+npx create-next-app <app-name>: Create a new Next.js application using Create Next App. Similar to Create React App, but for Next.js projects.
